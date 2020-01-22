@@ -1,0 +1,48 @@
+.panel {
+	border-radius: $border-radius;
+	background: $white;
+	margin-bottom: .5rem;
+	position: relative;
+	transition: box-shadow $transition;
+
+	&-title {
+		margin: 0;
+		border-radius: $border-radius;
+		overflow: hidden;
+
+		a {
+			display: block;
+			background: #E9EFF2;
+			padding: 1rem 3rem 1rem 1rem;
+			position: relative;
+
+			&::after {
+				@include icon-font;
+				content: $icon-dropdown;
+				font-size: 12px;
+				color: $body-color;
+				position: absolute;
+				top: 50%;
+				right: 1rem;
+				transform: translateY(-50%);
+			}
+
+			&:not(.collapsed) {
+				background: transparent;
+				color: $primary;
+
+				&::after {
+					transform: translateY(-50%) scale(-1);
+				}
+			}
+		}
+	}
+
+	&-body {
+		padding: 0 1rem 1.5rem;
+	}
+
+	&-shadow {
+		@include box-shadow;
+	}
+}

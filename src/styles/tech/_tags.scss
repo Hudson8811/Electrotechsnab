@@ -1,0 +1,62 @@
+.filter {
+	&-items {
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&-item {
+		display: inline-block;
+		border-radius: 5px;
+		background: $secondary;
+		padding: 0 .5rem;
+		margin: 0 .5rem .5rem 0;
+		user-select: none;
+
+		&__name {
+			margin-right: .5rem;
+			color: $white;
+			vertical-align: middle;
+		}
+
+		&__close {
+			font-size: .5rem;
+			color: $white;
+			vertical-align: middle;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+
+		&_reset {
+			background: none;
+			padding-top: 2px;
+		}
+	}
+}
+
+.tag {
+	display: inline-block;
+	border-radius: 5px;
+	background: $secondary;
+	padding: 0 .15rem 0 .5rem;
+	color: $white;
+	margin: 0 .5rem .5rem 0;
+
+	&:hover,
+	&.active {
+		color: $primary;
+	}
+
+	&-badge {
+		display: inline-block;
+		min-width: 1rem;
+		border-radius: 5px;
+		background: #FF9B06;
+		padding: 0 .15rem;
+		font-size: 11px;
+		text-align: center;
+		vertical-align: 1px;
+	}
+}

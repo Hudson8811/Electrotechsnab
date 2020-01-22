@@ -1,0 +1,34 @@
+section.pb-5
+	h2.mt-0.mb-4 Валидация форм
+	form
+		.row
+			.col-md-6.col-lg-4
+				.form-group
+					.js-input-validate.js-input-cyrillic(data-toggle="popover", data-validate-content="Введите русские символы.")
+						label(for="inputText11") Автоперевод в кириллицу
+						input.form-control#inputText11(pattern="^[-А-Яа-яЁё\s]+$", required)
+
+			.col-md-6.col-lg-4
+				.form-group
+					.js-input-validate(data-toggle="popover", data-validate-content="Введите русские символы.")
+						label(for="inputText12") Русские буквы
+						input.form-control#inputText12(pattern="^[-А-Яа-яЁё\s]+$", required)
+
+			.col-md-6.col-lg-4
+				.form-group
+					.js-input-validate(data-toggle="popover", data-validate-content="Введите символы от 0 до 9.")
+						label(for="inputText13") Только цифры
+						input.form-control#inputText13(pattern="^[0-9()\s]+$", required)
+
+			.col-md-6.col-lg-4
+				.form-group
+					label(for="inputDate11") 18 лет
+					.widget.date
+						.date__item
+							.date__title.d-none С
+							.date__title.d-none По
+							.date__control.w-100
+								span.date__icon(title="Выбрать дату")
+								input.date__input.form-control.js-calendar-birthdate#inputDate11(required)
+
+		button.btn.btn-base.js-validate-submit Принять

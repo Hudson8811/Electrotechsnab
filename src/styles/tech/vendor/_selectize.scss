@@ -1,0 +1,42 @@
+.selectize-control {
+	.selectize-input {
+		box-shadow: none;
+		border-color: #ced4da;
+		border-radius: $border-radius;
+		padding: .5rem .5rem;
+		font-size: 1rem;
+
+		&.dropdown-active {
+			border-bottom: none;
+			border-radius: $border-radius $border-radius 0 0;
+		}
+
+		&.disabled {
+			opacity: 1;
+			border-color: #E5E5E5;
+			background-color: $white;
+			color: #E5E5E5;
+		}
+	}
+
+	.selectize-dropdown {
+		border-top: none;
+		border-color: #ced4da;
+		border-radius: 0 0 $border-radius $border-radius;
+		overflow: hidden;
+	}
+
+	.selectize-dropdown-content {
+		font-size: 1rem;
+
+		@include custom-scroll;
+
+		.option {
+			padding: .5rem .5rem;
+		}
+	}
+
+	&.multi .selectize-input > div {
+		border-radius: 5px;
+	}
+}

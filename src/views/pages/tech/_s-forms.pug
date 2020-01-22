@@ -1,0 +1,142 @@
+section.pb-5
+	h2.mt-0.mb-4 Формы
+	.row
+		.col-md-6.col-lg-4
+			.form-group
+				label(for="inputText1") Input Label
+				input.form-control#inputText1(placeholder="Placeholder")
+
+		.col-md-6.col-lg-4
+			.form-group
+				label(for="inputText2") Input Label Disabled
+				input.form-control#inputText2(placeholder="Placeholder" disabled)
+
+		.col-md-6.col-lg-4
+			.form-group.has-error
+				label(for="inputText3") .has-error .form-control
+				input.form-control#inputText3(placeholder="Placeholder")
+
+	.row
+		.col-md-6.col-lg-4
+			.form-group
+				label Select
+				select.js-select
+					- let n = 0;
+					while n++ < 10
+						option= "Значение " + n
+
+		.col-md-6.col-lg-4
+			.form-group
+				label Select Disabled
+				select.js-select(disabled)
+					- let m = 0;
+					while m++ < 10
+						option= "Значение " + m
+
+	.row
+		.col-md-6.col-lg-4
+			.form-group
+				label Multiselect
+				select.js-select(multiple)
+					- let k = 0;
+					while k++ < 10
+						option= "Значение " + k
+
+		.col-md-6.col-lg-4
+			.form-group
+				label Multiselect Disabled
+				select.js-select(multiple disabled)
+					- let l = 0;
+					while l++ < 10
+						option= "Значение " + l
+
+	.row
+		.col-md-6.col-lg-4
+			.form-group
+				label(for="inputDate1") Input for datepicker
+				.datepicker-wrapper
+					input.form-control.js-datepicker#inputDate1(autocomplete="off")
+
+	.row
+		.col-md-6.col-lg-4
+			.form-group
+				label(for="textarea1") Textarea
+				textarea.form-control#textarea1(placeholder="Placeholder" rows="4")
+
+		.col-md-6.col-lg-4
+			.form-group
+				label(for="textarea2") Textarea Disabled
+				textarea.form-control#textarea2(placeholder="Placeholder" rows="4" disabled)
+
+	.row
+		.col-md-6.col-lg-4
+			.form-group
+				label(for="customFile") File browser
+				.custom-file
+					input#customFile.custom-file-input(type="file")
+					label.custom-file-label(for="customFile") Choose file...
+
+		.col-md-6.col-lg-4
+			.form-group
+				label(for="customFileMultiple") File browser multiple
+				.custom-file
+					input#customFileMultiple.custom-file-input(type="file" multiple)
+					label.custom-file-label(for="customFileMultiple") Choose files...
+
+	.row
+		.col-md-6.col-lg-4
+			.form-group
+				.input-group
+					.input-group-prepend
+						span.input-group-text
+							i.icon-lock
+					input.form-control(placeholder="Placeholder")
+
+		.col-md-6.col-lg-4
+			.form-group
+				.input-group
+					input.form-control(type="password" placeholder="Placeholder")
+					.input-group-append
+						a.input-group-text.js-drop-eye(href="javascript:void(0);")
+							i.icon-eye
+
+	.row.mt-2
+		.col-md-6.col-lg-4
+			.form-group
+				label
+					input(type="checkbox" checked)
+					span Label
+
+			.form-group
+				label
+					input(type="checkbox")
+					span Label
+
+			.form-group
+				label
+					input(type="checkbox" checked disabled)
+					span Label
+
+		.col-md-6.col-lg-4
+			.form-group
+				label
+					input(type="radio" name="radiogroup" checked)
+					span Label
+
+			.form-group
+				label
+					input(type="radio" name="radiogroup")
+					span Label
+
+			.form-group
+				label
+					input(type="radio" name="radiogroup" disabled)
+					span Label
+
+	.form-group.mb-4
+		label(for="counter1") Input for counter
+		div
+			.counter.js-counter
+				.counter-minus
+				.counter-plus
+				input.form-control.counter-input#counter1(value="888" data-min="1")

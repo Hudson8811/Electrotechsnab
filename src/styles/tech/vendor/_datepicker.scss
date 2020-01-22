@@ -1,0 +1,88 @@
+.datepicker-wrapper {
+	position: relative;
+
+	.form-control {
+		padding-right: 2.5rem;
+	}
+
+	&::before {
+		display: inline-block;
+		@include icon-font;
+		content: $icon-calendar;
+		font-size: 21px;
+		color: $primary;
+		position: absolute;
+		top: 50%;
+		right: .75rem;
+		transform: translateY(-50%);
+		pointer-events: none;
+	}
+}
+
+.dropdown-menu {
+	padding: .5rem;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+
+	&::before,
+	&::after {
+		content: none;
+	}
+}
+
+.datepicker table tr td,
+.datepicker table tr th {
+	border-radius: 0;
+	width: 40px;
+}
+
+.datepicker table tr td span {
+	border-radius: 0;
+	font-weight: bold;
+}
+
+.datepicker table tr td.today {
+	background-color: #FD783E;
+	border-color: #FD783E;
+	font-weight: bold;
+	color: $white;
+
+	&:hover {
+		background-color: #FD783E;
+		border-color: #FD783E;
+		color: $white;
+	}
+}
+
+.datepicker table tr td.active:active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active {
+	background-color: $primary;
+	border-color: $primary;
+	font-weight: bold;
+	text-shadow: none;
+
+	&:hover {
+		background-color: $primary;
+		border-color: $primary;
+	}
+}
+
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active {
+	background-color: $primary;
+	border-color: $primary;
+	font-weight: bold;
+	text-shadow: none;
+
+	&:hover {
+		background-color: $primary;
+		border-color: $primary;
+	}
+}

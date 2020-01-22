@@ -1,0 +1,33 @@
+.file-icons {
+	:not(:last-child) {
+		margin-right: .25rem;
+	}
+}
+
+.file-icon {
+	display: inline-block;
+	font-size: 51px;
+}
+
+.socs {
+	:not(:last-child) {
+		margin-right: .75rem;
+	}
+}
+
+a.soc {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	border-radius: 5px;
+	background: $secondary;
+	text-align: center;
+	font-size: 26px;
+	line-height: 53px;
+	color: $white;
+	transition: background-color $transition;
+
+	&:hover {
+		background: $link-hover-color;
+	}
+}

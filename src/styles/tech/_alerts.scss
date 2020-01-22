@@ -1,0 +1,41 @@
+.alert {
+	// clearing bootstrap alert
+	border: none;
+	background: none;
+	padding: 0;
+	color: $body-color;
+
+	padding-left: 2rem;
+	margin-bottom: 1rem;
+	position: relative;
+
+	&::before {
+		font-size: 22px;
+		position: absolute;
+		left: 0;
+	}
+
+	&-success {
+		&::before {
+			@include icon-font;
+			content: $icon-success;
+			color: #28A745;
+		}
+	}
+
+	&-info {
+		&::before {
+			@include icon-font;
+			content: $icon-info;
+			color: #6ECFFE;
+		}
+	}
+
+	&-danger {
+		&::before {
+			@include icon-font;
+			content: $icon-danger;
+			color: #DC3545;
+		}
+	}
+}

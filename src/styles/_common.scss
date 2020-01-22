@@ -1,0 +1,311 @@
+html {
+	font-size: 14px;
+}
+
+//h2, .h2,
+//h3, .h3,
+//h4, .h4,
+//h5, .h5,
+//h6, .h6 {
+//	margin-top: 2rem;
+//}
+//
+//h5, .h5,
+//h6, .h6 {
+//	margin-bottom: .25rem;
+//}
+//
+//@media (min-width: $screen-sm) {
+//	h1, .h1 {
+//		font-size: 47px;
+//	}
+//
+//	h2, .h2 {
+//		font-size: 38px;
+//	}
+//
+//	h3, .h3 {
+//		font-size: 30px;
+//	}
+//
+//	h4, .h4 {
+//		font-size: 25px;
+//	}
+//
+//	h5, .h5 {
+//		font-size: 20px;
+//	}
+//}
+
+figcaption {
+	font-size: 13px;
+	color: $secondary;
+}
+
+a {
+	color: $primary;
+	transition: color $transition;
+	outline: none;
+}
+
+.fake {
+	border-bottom: 1px dotted rgba($primary, .5);
+	transition: color $transition, border-bottom-color $transition;
+
+	&:hover {
+		border-bottom-color: $link-hover-color;
+	}
+}
+
+ul:not([class]) {
+	list-style: none;
+	padding-left: .9rem;
+	position: relative;
+
+	li {
+		&::before {
+			content: '';
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background: $body-color;
+			position: absolute;
+			left: 0;
+			margin-top: .55em;
+		}
+	}
+}
+
+ol:not([class]) {
+	list-style: none;
+	padding: 0;
+	counter-reset: list-numeric;
+
+	li {
+		&::before {
+			counter-increment: list-numeric;
+			content: counter(list-numeric);
+			font-weight: bold;
+			margin-right: .5rem;
+		}
+	}
+
+	ol {
+		margin-top: 1rem;
+		padding-left: 1rem;
+		counter-reset: list-numeric-inner;
+
+		li {
+			&::before {
+				counter-increment: list-numeric-inner;
+				content: counter(list-numeric) '.' counter(list-numeric-inner);
+			}
+		}
+	}
+}
+
+li {
+	margin-bottom: 1rem;
+}
+
+label {
+	font-weight: bold;
+	margin-bottom: .25rem;
+}
+
+//b, strong {
+//	font-weight: bold;
+//}
+
+.light-text {
+	font-size: 17px;
+	font-weight: $font-weight-light;
+	margin-bottom: 1.5rem;
+}
+
+.list-wrapper {
+	margin-left: -.8rem;
+}
+
+.img-bg {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	&::before {
+		display: block;
+		content: '';
+		padding-bottom: 100%;
+	}
+}
+
+.img-cover {
+	background-size: cover;
+}
+
+.responsive-2by1 {
+	&::before {
+		padding-bottom: 50%;
+	}
+}
+
+.responsive-3by2 {
+	&::before {
+		padding-bottom: 66.66667%;
+	}
+}
+
+.responsive-4by3 {
+	&::before {
+		padding-bottom: 75%;
+	}
+}
+
+.icon {
+	font-family: $font-family-base !important;
+	padding-left: 1.4rem;
+	position: relative;
+
+	&::before {
+		@include icon-font;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+}
+
+.file {
+	display: flex;
+
+	&__icon {
+		font-size: 51px;
+		color: $primary;
+		line-height: 1;
+	}
+
+	&__desc {
+		margin-left: .5rem;
+	}
+
+	&__title {}
+
+	&__text {
+		color: $secondary;
+	}
+}
+
+.back-to-top {
+	display: inline-block;
+	border-radius: 5px;
+	background-color: #E9EFF2;
+	padding: 3rem .5rem .25rem;
+	font-size: 13px;
+	color: $body-color;
+	text-align: center;
+	position: fixed;
+	right: 5vw;
+	bottom: 5vh;
+	z-index: -1;
+	opacity: 0;
+	transition: background-color $transition, opacity $transition;
+
+	@include box-shadow;
+
+	&::before {
+		@include icon-font;
+		content: $icon-dropdown;
+		width: 32px;
+		height: 32px;
+		line-height: 34px;
+		border-radius: 50%;
+		background-color: $white;
+		font-size: 1rem;
+		position: absolute;
+		top: .5rem;
+		left: 50%;
+		transform: translateX(-50%) scale(-1);
+		transition: color $transition;
+	}
+
+	&:hover {
+		background-color: $link-hover-color;
+		color: currentColor;
+	}
+
+	&.shown {
+		z-index: 1000;
+		opacity: 1;
+	}
+}
+
+
+// atoms
+// .font-secondary {
+// 	font-family: $font-family-secondary;
+// }
+
+.base-text {
+	font-size: 1rem !important;
+}
+
+.big-text {
+	font-size: 18px !important;
+}
+
+.small-text {
+	font-size: 13px !important;
+}
+
+.note {
+	font-size: 11px;
+}
+
+.line-height-1_2 {
+	line-height: 1.2 !important;
+}
+
+.mb-2rem {
+	margin-bottom: 2rem !important;
+}
+
+.xs-full-width {
+	@media (max-width: $screen-sm - 1) {
+		width: 100%;
+	}
+}
+
+
+/* Индикатор загрузки */
+.loading-indicator {
+	position: relative;
+}
+
+.loading-indicator .loading-layer,
+
+.loading-indicator .loading-icon {
+	position: absolute;
+	z-index: 1000;
+}
+
+.loading-indicator .loading-layer {
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	right: 0;
+	top: 0;
+}
+
+.loading-indicator .loading-icon {
+	height: 50px;
+	margin: -25px 0 0 -40px;
+	left: 50%;
+	top: 50%;
+	width: 80px;
+}
+
+body.loading-indicator .loading-icon {
+	position: fixed;
+}

@@ -1,0 +1,19 @@
+.pagination {
+	margin: 0;
+
+	.page-item {
+		margin-bottom: 0;
+	}
+
+	.page-link {
+		&:focus {
+			box-shadow: none;
+		}
+	}
+
+	&-button {}
+
+	&-number {
+		max-width: 120px;
+	}
+}

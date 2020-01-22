@@ -1,0 +1,59 @@
+// grid breakpoints
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1680px;
+
+// container max widths
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+$container-xxl: 1620px;
+
+
+// bootstrap overrides
+
+//$enable-rounded: false;
+
+$body-color: #111;
+
+$font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$primary: #006AFF;
+$secondary: #999;
+
+$link-hover-color: #00BFFF;
+$link-hover-decoration: none;
+
+//$h1-font-size: 25px;
+//$h2-font-size: 20px;
+//$h3-font-size: 16px;
+//$h4-font-size: 16px;
+//$h5-font-size: 16px;
+//$h6-font-size: 16px;
+
+$border-radius: 5px;
+
+$grid-breakpoints: (
+	xs: $screen-xs,
+	sm: $screen-sm,
+	md: $screen-md,
+	lg: $screen-lg,
+	xl: $screen-xl,
+	// xxl: $screen-xxl
+);
+
+$container-max-widths: (
+	sm: $container-sm,
+	md: $container-md,
+	lg: $container-lg,
+	xl: $container-xl,
+	// xxl: $container-xxl
+);
+
+
+// icons
+$icomoon-font-path: './fonts/icons';

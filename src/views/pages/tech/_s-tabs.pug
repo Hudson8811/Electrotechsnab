@@ -1,0 +1,20 @@
+section.pb-5
+	h2.mt-0.mb-4 Табы
+	ul#myTab.nav.nav-tabs.tabs-base.d-none.d-md-flex(role="tablist")
+		li.nav-item
+			a#tab1-tab.nav-link.active(data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Active Tab
+		li.nav-item
+			a#tab2-tab.nav-link(data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false") Tab
+		li.nav-item
+			a#tab3-tab.nav-link(data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false") Tab
+
+	.d-md-none.mb-3
+		select.js-select.js-tab-select#myTabSelect
+			option(value="#tab1") Active Tab
+			option(value="#tab2") Tab
+			option(value="#tab3") Tab
+
+	#myTabContent.tab-content
+		#tab1.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="tab1-tab") Сведения, независимо от формы их представления, воспринимаемые человеком или специальными устройствами как отражение фактов материального мира в процессе коммуникации.
+		#tab2.tab-pane.fade(role="tabpanel" aria-labelledby="tab2-tab") Сведения, независимо от формы их представления, воспринимаемые человеком или специальными устройствами как отражение фактов материального мира в процессе коммуникации.
+		#tab3.tab-pane.fade(role="tabpanel" aria-labelledby="tab3-tab") Сведения, независимо от формы их представления, воспринимаемые человеком или специальными устройствами как отражение фактов материального мира в процессе коммуникации.
