@@ -1,14 +1,15 @@
 .selectize-control {
 	.selectize-input {
 		box-shadow: none;
-		border-color: #ced4da;
+		border-color: $secondary;
 		border-radius: $border-radius;
-		padding: .5rem .5rem;
+		padding: .6rem .5rem;
 		font-size: 1rem;
 
 		&.dropdown-active {
 			border-bottom: none;
 			border-radius: $border-radius $border-radius 0 0;
+			border-color: $link-hover-color;
 		}
 
 		&.disabled {
@@ -17,13 +18,18 @@
 			background-color: $white;
 			color: #E5E5E5;
 		}
+
+
 	}
 
 	.selectize-dropdown {
 		border-top: none;
-		border-color: #ced4da;
+		border-color: $link-hover-color;
 		border-radius: 0 0 $border-radius $border-radius;
 		overflow: hidden;
+		.active{
+			background: #E9EFF2;
+		}
 	}
 
 	.selectize-dropdown-content {
@@ -32,11 +38,66 @@
 		@include custom-scroll;
 
 		.option {
-			padding: .5rem .5rem;
+			padding: .6rem .5rem;
+		}
+	}
+
+	&.single, &.multi{
+		.selectize-input{
+			&::after{
+				content: $icon-dropdown;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin-top: 0;
+				width: 3rem;
+				height: 100%;
+				border: none;
+				font-size: 1rem;
+				font-family: '#{$icomoon-font-family}' !important;
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
 		}
 	}
 
 	&.multi .selectize-input > div {
-		border-radius: 5px;
+		border-radius: 8px;
+		background: #808080;
+		color: $white;
+		border: none;
+		font-size: 12px;
+		.remove{
+			font-size: 0;
+			border: none;
+			&::after{
+				content: $icon-close;
+				display: inline-block;
+				vertical-align: middle;
+				position: static;
+				width: auto;
+				height: auto;
+				border: none;
+				font-size: 0.6rem;
+				font-family: '#{$icomoon-font-family}' !important;
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		}
 	}
 }

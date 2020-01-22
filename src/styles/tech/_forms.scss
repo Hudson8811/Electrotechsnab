@@ -1,7 +1,7 @@
 .form-control {
 	height: auto;
-	//border-color: $secondary;
-	padding: .5rem .5rem;
+	border-color: $secondary;
+	padding: .6rem .5rem;
 	line-height: 1;
 
 	&:hover {
@@ -34,7 +34,7 @@
 
 .has-error {
 	.form-control {
-		border-color: #DC3545;
+		border-color: #999999;
 	}
 }
 
@@ -158,15 +158,19 @@ input[type="radio"] {
 
 	&:checked {
 		+ span {
+			&::before{
+				background: $primary;
+				border: none;
+			}
 			&::after {
 				content: '';
-				width: $radio-size - 6;
-				height: $radio-size - 6;
+				width: $radio-size - 8;
+				height: $radio-size - 8;
 				border-radius: 50%;
-				background: $primary;
+				background: $white;
 				position: absolute;
-				top: 6px;
-				left: 3px;
+				top: 7px;
+				left: 4px;
 			}
 		}
 
@@ -213,7 +217,7 @@ input[type="radio"] {
 
 		&:hover {
 			~ .counter-input {
-				border-color: $primary;
+				border-color: #111111;
 			}
 		}
 
@@ -222,7 +226,7 @@ input[type="radio"] {
 			content: '';
 			width: 14px;
 			height: 2px;
-			background: $primary;
+			background: #111111;
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -242,13 +246,44 @@ input[type="radio"] {
 			content: '';
 			width: 14px;
 			height: 2px;
-			background: $primary;
+			background: #111111;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%) rotate(90deg);
 		}
 	}
+}
+
+.custom-file-label::after{
+	color: #ffffff;
+	content: "Выбрать файл";
+	background: linear-gradient(180deg, #2BFFD9 -507.65%, #0E4DEE 569.44%);
+}
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child){
+	border-radius: $border-radius;
+	padding-right: 3rem;
+}
+.input-group > .form-control:not(:first-child), .input-group > .custom-select:not(:first-child){
+	border-radius: $border-radius;
+	padding-left: 3rem;
+}
+.input-group-prepend{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.input-group-append{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.input-group-text {
+	padding: 0.475rem 0.75rem;
+	font-size: 1.5rem;
+	background-color: transparent;
+	border: none;
+	z-index: 10;
 }
 
 @import 'vendor/selectize';
