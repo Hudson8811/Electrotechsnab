@@ -7,6 +7,9 @@
 .file-icon {
 	display: inline-block;
 	font-size: 51px;
+	&.icon-file-mini{
+		font-size: 12px;
+	}
 }
 
 .socs {
@@ -19,8 +22,8 @@ a.soc {
 	display: inline-block;
 	width: 48px;
 	height: 48px;
-	border-radius: 5px;
-	background: $secondary;
+	border-radius: 24px;
+	background: #1CA4E4;
 	text-align: center;
 	font-size: 26px;
 	line-height: 53px;

@@ -10,21 +10,31 @@ section.pb-5
 						button.close(data-dismiss="modal")
 							i.icon-close
 
-					.modal-body
+					.modal-body.b
 						.form-group
-							label(for="inputModalText1") Имя пользователя
-							input.form-control#inputModalText1
+							label(for="inputModalText1") Email
+							input.form-control#inputModalText1(type="email")
 
 						.form-group
 							label(for="inputModalText2") Пароль
-							input.form-control#inputModalText2(type="password")
+							<div class="input-group">
+							<input class="form-control" type="password">
+							<div class="input-group-append"><a class="input-group-text js-drop-eye" href="javascript:void(0);"><i class="icon-eye"></i></a></div>
+							</div>
 
-						label
-							input(type="checkbox")
-							span Запомнить меня на сайте
+						div.forgot-pass.mb-2
+							a(href="#") Забыли пароль?
 
 					.modal-footer
-						button.btn.btn-base Войти
+						.row
+							.col-5.mb-3
+								button.btn.btn-base Сохранить
+
+							.col-6.mb-3
+								span.req-all Все поля обязательны для заполнения
+
+						div Нет учетной записи?
+							a(href="#")  Зарегистрироваться
 
 		.col-md-6.col-lg-7.mb-3.mb-lg-0
 			h2.mt-0.mb-4 Заглушки
