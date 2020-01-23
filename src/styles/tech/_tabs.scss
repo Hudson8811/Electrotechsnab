@@ -1,7 +1,27 @@
 .tabs-base {
 	margin-bottom: 1rem;
+	border:0;
 
-	.nav-item {}
+	.nav-item {
 
-	.nav-link {}
+	}
+
+	.nav-link {
+		padding: 0.5rem 2.3rem;
+		border:0;
+		font-size: 1.2rem;
+		border-bottom: 1px solid #54bbea;
+
+		&:hover{
+			border-color: inherit;
+		}
+
+		&.active{
+			color: $body-color;
+			border-bottom: 1px solid $body-color;
+		}
+		&:visited{
+			color: inherit;
+		}
+	}
 }

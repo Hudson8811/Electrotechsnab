@@ -1,13 +1,33 @@
 .pagination {
 	margin: 0;
+	font-weight: 500;
 
 	.page-item {
 		margin-bottom: 0;
+
+		&.active{
+			.page-link{
+				background-color: transparent;
+				color: #FF9B06;
+			}
+		}
+		margin-right: 5px;
 	}
 
 	.page-link {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding: 0.15rem 0.4rem;
+		border:0;
 		&:focus {
 			box-shadow: none;
+		}
+		&:hover{
+			background-color: transparent;
+		}
+		img{
+			display: block;
 		}
 	}
 

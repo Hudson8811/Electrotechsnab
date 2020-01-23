@@ -20,8 +20,9 @@
 }
 
 .dropdown-menu {
-	padding: .5rem;
+	padding: 0.5em 0;
 	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+	border:1px solid #f6f6f6;
 
 	&::before,
 	&::after {
@@ -29,20 +30,25 @@
 	}
 }
 
+.datepicker table tr td{
+	color: #1CA4E4;
+}
+
 .datepicker table tr td,
 .datepicker table tr th {
 	border-radius: 0;
-	width: 40px;
+	width: 44px;
+	height: 34px;
 }
 
 .datepicker table tr td span {
 	border-radius: 0;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 .datepicker table tr td.today {
-	background-color: #FD783E;
-	border-color: #FD783E;
+	background-color: #ff9b06;
+	border-color: #ff9b06;
 	font-weight: bold;
 	color: $white;
 
@@ -57,8 +63,8 @@
 .datepicker table tr td.active.highlighted:active,
 .datepicker table tr td.active.active,
 .datepicker table tr td.active.highlighted.active {
-	background-color: $primary;
-	border-color: $primary;
+	background-color: #28a745;
+	border-color: #28a745;
 	font-weight: bold;
 	text-shadow: none;
 
@@ -85,4 +91,29 @@
 		background-color: $primary;
 		border-color: $primary;
 	}
+}
+
+.datepicker table tr th.next{
+	text-indent: -99999em;
+	background:url("images/datapicker-arrow-right.svg") no-repeat center center !important;
+}
+
+.datepicker table tr th.dow{
+	padding-top: 7px;
+	padding-bottom: 10px;
+	color: #999;
+	font-weight: 500;
+}
+
+.datepicker table tr th.prev{
+	text-indent: -99999em;
+	background:url("images/datapicker-arrow-left.svg") no-repeat center center !important;
+}
+
+.datepicker .datepicker-switch{
+	font-weight: 500;
+}
+
+.datepicker .datepicker-days table thead{
+	border-bottom: 1px solid #CAD0D8;
 }

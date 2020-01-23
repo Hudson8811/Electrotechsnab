@@ -8,7 +8,7 @@ mixin pagination
 	ul.pagination
 		li.page-item.disabled
 			a.page-link(href="#" aria-label="Previous")
-				span(aria-hidden="true") &laquo;
+				img(src="images/pagi-arrow-prev.svg")
 		li.page-item.active
 			span.page-link 1
 		li.page-item
@@ -21,19 +21,17 @@ mixin pagination
 			a.page-link(href="#") 5
 		li.page-item
 			a.page-link(href="#" aria-label="Next")
-				span(aria-hidden="true") &raquo;
+				img(src="images/pagi-arrow-next.svg")
 
 mixin pagination-bar
+	div.mb-2
+		span С 1 по 20 из 10 661
 	nav.row.align-items-center
 		.col-auto.mb-3
 			button.btn.btn-ghost.pagination-button Показать еще
 
 		.col-auto.mb-3
 			+pagination
-
-		.col-auto.align-items-center.mb-3.d-none.d-lg-flex
-			input.form-control.pagination-number.js-input-digits(placeholder="№ страницы")
-			span.ml-3 С 1 по 20 из <b>10 661</b>
 
 //- +file("pdf", "Sales guide", "(PDF, 700 Кб)")
 mixin file(type, title, text)
