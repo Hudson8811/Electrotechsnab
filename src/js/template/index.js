@@ -21,6 +21,7 @@ import {backToTop} from './modules/common/backToTop';
 import {scrollToAnchor} from './modules/common/scrollToAnchor';
 import {toggleText} from './modules/common/toggleText';
 import {inputDigits} from './modules/common/inputDigits';
+import {slider} from './modules/common/bootstrap-slider';
 
 // import {mobileMenu} from './modules/mobileMenu';
 // import {megaMenu} from './modules/megaMenu';
@@ -60,3 +61,10 @@ indiBlockController.add(inputDigits, '.js-input-digits');
 
 // первичная инициализация
 indiBlockController.initAll();
+
+$(document).ready(function () {
+    if($(".js-span-data-range").length>0){
+        $(".js-span-data-range").slider({});
+        alert(1);
+    }
+});
