@@ -28,7 +28,13 @@ import {tooltip} from './modules/common/popper';
 // import {megaMenu} from './modules/megaMenu';
 
 import 'slick-carousel';
+
 import 'masonry-layout';
+var $ = require('jquery');
+var jQueryBridget = require('jquery-bridget');
+var Masonry = require('masonry-layout');
+// make Masonry a jQuery plugin
+jQueryBridget( 'masonry', Masonry, $ );
 
 /**
  * Общий функционал для всех страниц
@@ -91,4 +97,9 @@ $(document).ready(function () {
            var tabId = $(this).data('tab');
        }
     });
+    if ($('.js-masonry-grid').length > 0){
+        $('.js-masonry-grid').masonry({
+            itemSelector: '.masonry-item'
+        });
+    }
 });
