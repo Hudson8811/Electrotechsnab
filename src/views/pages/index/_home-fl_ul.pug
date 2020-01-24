@@ -1,4 +1,16 @@
 .home-fl_ul
-    .home-fl_ul__tabs
+    .home-fl_ul__toggle
         a.js-toggle-fl-ul.btn.btn-base.btn-large.px-4.active(href="javascript:;" data-tab="1") Для физических лиц
         a.js-toggle-fl-ul.btn.btn-base.btn-large.px-4.ml-4(href="javascript:;" data-tab="2") Для организаций и ИП
+
+    .home-fl_ul__tabs
+        .home-fl_ul__tab.active(data-tab="1")
+            .js-masonry-grid.row
+                .masonry-item.col-12.col-md-6
+                    .home-fl_ul__grid-item
+                        h3 Кабели и аксессуары
+                        .info Полный каталог IEK, TDM, Cabeltech, СПКБ
+                .masonry-item.col-12.col-md-6
+                    .home-fl_ul__grid-item
+                        h3 Для дачи
+                        .info Оборудование для электрификации частных построек, со сложными условиями эксплуатации
