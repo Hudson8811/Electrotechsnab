@@ -3,6 +3,19 @@ section.pb-5
 	.row
 		.col-md-6.col-lg-4
 			.form-group
+				input.form-control#inputText1(placeholder="Placeholder")
+
+		.col-md-6.col-lg-4
+			.form-group
+				input.form-control#inputText2(placeholder="Placeholder" disabled)
+
+		.col-md-6.col-lg-4
+			.form-group.has-error
+				input.form-control#inputText3(placeholder="Placeholder")
+
+	.row
+		.col-md-6.col-lg-4
+			.form-group
 				label(for="inputText1") Input Label
 				input.form-control#inputText1(placeholder="Placeholder")
 
