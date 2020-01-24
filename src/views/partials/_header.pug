@@ -12,7 +12,7 @@ header.header
 						a.mx-2(href="") Доставка и оплата
 						a.mx-2(href="") Возврат
 						a.mx-2(href="") О компании
-					a.contact-link.mx-2
+					a.contact-link.mx-2(href="")
 						//- заменить иконку
 						i.icon-info.mr-1
 						| Написать нам
@@ -30,12 +30,12 @@ header.header
 								i.icon-dropdown.ml-1
 							.user-company ООО «Кабельный альянс»
 
-	.header__logoline
+	.header__logoline.py-2
 		.container
-			.d-flex.justify-content-between
-				a.header__logo(href="")
+			.d-flex.align-items-center.justify-content-between
+				a.header__logo.d-flex.align-items-center(href="")
 					img(src="images/logo.svg" alt="")
-				.header__store-info
+				.header__store-info.ml-4
 					| Интернет-магазин
 					=' '
 					a(href="") Проводов,
@@ -49,25 +49,25 @@ header.header
 					a(href="") Светотехники
 					=' '
 					| и еще 32 категорий
-				form.header__search.d-flex
-					input.form-control(placeholder="Поиск по наименованию, артикулу")
+				form.header__search.d-flex.align-items-center.ml-3
+					input.form-control.h-100(placeholder="Поиск по наименованию, артикулу")
 					//- заменить иконку
-					button.btn.btn-base.btn-large: i.icon-info
-				.header__shop-menu
+					button.btn.btn-base.h-100: i.icon-info
+				.header__shop-menu.d-flex.align-items-center.ml-4
 					//- заменить иконки
-					a(href="")
-						.icon-block
+					a.text-center(href="")
+						.icons-block
 							i.icon-info
 						.label Заказы
-					a(href="")
-						.icon-block
+					a.text-center(href="")
+						.icons-block
 							i.icon-info
-							.counter 103
+							.counter 99
 						.label Избранное
-					a(href="")
-						.icon-block
+					a.text-center(href="")
+						.icons-block
 							i.icon-info
-							.counter 103
+							.counter 99
 						.label Корзина
 
 	.header__menuline
@@ -104,3 +104,5 @@ header.header
 					.h_menuline__info
 						.label Поставщики
 						.info 37 брендов
+
+							button.js-tooltip(data-toggle="tooltip" data-placement="top" title="Tooltip on top") asdsad
