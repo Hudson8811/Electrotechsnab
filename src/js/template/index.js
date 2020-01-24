@@ -3,26 +3,26 @@ import 'bootstrap';
 
 import 'babel-polyfill';
 
-import {indiBlockController} from '../indi';
+import { indiBlockController } from '../indi';
 
-import {ajaxForm} from './modules/common/ajaxForm';
-import {selectize} from './modules/common/selectize';
-import {fileInput} from './modules/common/fileInput';
-import {dropEye} from './modules/common/dropEye';
-import {phonemask} from './modules/common/phonemask';
-import {datepicker} from './modules/common/datepicker';
-import {counter} from './modules/common/counter';
-import {magnificPopupImage} from './modules/common/magnificPopupImage';
-import {magnificPopupVideo} from './modules/common/magnificPopupVideo';
-import {magnificPopupGallery} from './modules/common/magnificPopupGallery';
-import {tabsToSelect} from './modules/common/tabsToSelect';
-import {accordion} from './modules/common/accordion';
-import {backToTop} from './modules/common/backToTop';
-import {scrollToAnchor} from './modules/common/scrollToAnchor';
-import {toggleText} from './modules/common/toggleText';
-import {inputDigits} from './modules/common/inputDigits';
+import { ajaxForm } from './modules/common/ajaxForm';
+import { selectize } from './modules/common/selectize';
+import { fileInput } from './modules/common/fileInput';
+import { dropEye } from './modules/common/dropEye';
+import { phonemask } from './modules/common/phonemask';
+import { datepicker } from './modules/common/datepicker';
+import { counter } from './modules/common/counter';
+import { magnificPopupImage } from './modules/common/magnificPopupImage';
+import { magnificPopupVideo } from './modules/common/magnificPopupVideo';
+import { magnificPopupGallery } from './modules/common/magnificPopupGallery';
+import { tabsToSelect } from './modules/common/tabsToSelect';
+import { accordion } from './modules/common/accordion';
+import { backToTop } from './modules/common/backToTop';
+import { scrollToAnchor } from './modules/common/scrollToAnchor';
+import { toggleText } from './modules/common/toggleText';
+import { inputDigits } from './modules/common/inputDigits';
 //import {slider} from './modules/common/bootstrap-slider';
-import {tooltip} from './modules/common/popper';
+import { tooltip } from './modules/common/popper';
 
 // import {mobileMenu} from './modules/mobileMenu';
 // import {megaMenu} from './modules/megaMenu';
@@ -68,27 +68,48 @@ indiBlockController.add(tooltip, '.js-tooltip');
 indiBlockController.initAll();
 
 $(document).ready(function () {
-    if($(".js-span-data-range").length>0){
+    /*if($(".js-span-data-range").length>0){
         $(".js-span-data-range").slider({});
         alert(1);
-    }
+    }*/
 
-    if ($('.home-slider').length > 0){
+    if ($('.home-slider').length > 0) {
         $('.home-slider').slick({
             dots: true,
             arrows: true,
         });
     }
-
     $('.js-catalog-menu').click(function () {
-       event.preventDefault();
-       $(this).toggleClass('active');
+        event.preventDefault();
+        $(this).toggleClass('active');
     });
     $('.js-toggle-fl-ul').click(function () {
-       event.preventDefault();
-       if(!$(this).hasClass('active')){
-           $(this).addClass('active').siblings().removeClass('active');
-           var tabId = $(this).data('tab');
-       }
+        event.preventDefault();
+        if (!$(this).hasClass('active')) {
+            $(this).addClass('active').siblings().removeClass('active');
+            var tabId = $(this).data('tab');
+        }
     });
+    if ($('.foo-manufacturers-slider').length > 0) {
+        $('.foo-manufacturers-slider').slick({
+            dots: false,
+            arrows: true,
+
+            infinite: true,
+            slidesToShow: 7,
+            slidesToScroll: 7
+        });
+    }
+    if ($('.js-footer-menu-all-cat').length > 0) {
+    $( ".js-footer-menu-all-cat" ).click(function(){ // задаем функцию при нажатиии на элемент с классом toggle
+	    $( ".footer-all-categories" ).toggle(300); //  скрываем, или отображаем все элементы <div>
+      });
+    }
+
+    if ($('.js-foo-ac-close-btn').length > 0) {
+        $( ".js-foo-ac-close-btn" ).click(function(){ // задаем функцию при нажатиии на элемент с классом toggle
+            $( ".footer-all-categories" ).hide(300); //  скрываем, или отображаем все элементы <div>
+          });
+        }
+
 });
