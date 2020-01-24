@@ -8,7 +8,7 @@
     vertical-align: middle;
   }
 
-  .js-user-header{
+  .header__user-block{
     i.icon-info{
       color: $primary;
     }
@@ -109,15 +109,13 @@
     color: #FFFFFF;
     transition: 0.15s ease-in-out;
   }
-  &.js-catalog-menu{
-    &.active{
-      background: $white;
-      color: #FF5F1B;
-      .h_menuline__info, .h_menuline__icon{
-        background: -webkit-linear-gradient(180deg, #FF5F1B -6.25%, #FF0000 259.72%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+  &.active{
+    background: $white;
+    color: #FF5F1B;
+    .h_menuline__info, .h_menuline__icon{
+      background: -webkit-linear-gradient(180deg, #FF5F1B -6.25%, #FF0000 259.72%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }
