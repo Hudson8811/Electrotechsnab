@@ -72,7 +72,10 @@ $(document).ready(function () {
         alert(1);
     }
 
-    $('.slick-slider').slick({
-        dots: true,
-    });
+    if ($('.home-slider').length > 0){
+        $('.home-slider').slick({
+            dots: true,
+            arrows: true,
+        });
+    }
 });
