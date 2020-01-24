@@ -22,7 +22,7 @@ import {scrollToAnchor} from './modules/common/scrollToAnchor';
 import {toggleText} from './modules/common/toggleText';
 import {inputDigits} from './modules/common/inputDigits';
 //import {slider} from './modules/common/bootstrap-slider';
-import {tooltip} from './modules/common/popper.min';
+import {tooltip} from './modules/common/popper';
 
 // import {mobileMenu} from './modules/mobileMenu';
 // import {megaMenu} from './modules/megaMenu';
