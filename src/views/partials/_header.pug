@@ -1,39 +1,39 @@
 header.header
-	.header__topline
+	.header__topline.py-2
 		.container
-			.d-flex.justify-content-between
-				.left-side.d-flex
+			.d-flex.justify-content-between.align-items-center
+				.left-side.d-flex.align-items-center
 					a.js-city-select(href="javascript:;")
-						i.icon-place
+						i.icon-place.mr-1
 						| Великий Новгород
-					.phone +7 (8162) 535-051
-					.header__menu
-						a Контакты
-						a Доставка и оплата
-						a Возврат
-						a О компании
-					a.contact-link
+					.phone.mx-2 +7 (8162) 535-051
+					.header__menu.mx-2
+						a.mx-2(href="") Контакты
+						a.mx-2(href="") Доставка и оплата
+						a.mx-2(href="") Возврат
+						a.mx-2(href="") О компании
+					a.contact-link.mx-2
 						//- заменить иконку
-						i.icon-info
+						i.icon-info.mr-1
 						| Написать нам
 
-				.right-side.d-flex
+				.right-side.d-flex.align-items-center
 					a.js-header-managers(href="javascript:;")
 						| Личные менеджеры
-						i.icon-dropdown
-					.js-user-header.d-flex
+						i.icon-dropdown.ml-1
+					.js-user-header.d-flex.ml-4
 						//- заменить иконку
-						i.icon-info
+						i.icon-info.mr-1
 						.user-header__info
-							a.user-name
+							a.user-name(href="javascript:;")
 								| Павел Константинопольский
-								i.icon-dropdown
+								i.icon-dropdown.ml-1
 							.user-company ООО «Кабельный альянс»
 
 	.header__logoline
 		.container
 			.d-flex.justify-content-between
-				a.header__logo
+				a.header__logo(href="")
 					img(src="images/logo.svg" alt="")
 				.header__store-info
 					| Интернет-магазин
@@ -74,32 +74,32 @@ header.header
 		.container
 			.h_menuline.d-flex.justify-content-between
 				//- заменить иконки
-				a.h_menuline__link.js-catalog-menu.d-flex.align-content-center(href="javascript:;")
+				a.h_menuline__link.js-catalog-menu.d-flex.align-items-center(href="javascript:;")
 					.h_menuline__icon: i.icon-info
 					.h_menuline__info
 						.label Каталог
 						.info 12 583 товара
-				a.h_menuline__link.d-flex.align-content-center(href="")
+				a.h_menuline__link.d-flex.align-items-center(href="")
 					.h_menuline__icon: i.icon-info
 					.h_menuline__info
 						.label Распродажа
 						.info скидки до 70%
-				a.h_menuline__link.d-flex.align-content-center(href="")
+				a.h_menuline__link.d-flex.align-items-center(href="")
 					.h_menuline__icon: i.icon-info
 					.h_menuline__info
 						.label Новинки
 						.info 1 000 товаров
-				a.h_menuline__link.d-flex.align-content-center(href="")
+				a.h_menuline__link.d-flex.align-items-center(href="")
 					.h_menuline__icon: i.icon-info
 					.h_menuline__info
 						.label Лучшие предложения
 						.info 1 000 товаров
-				a.h_menuline__link.d-flex.align-content-center(href="")
+				a.h_menuline__link.d-flex.align-items-center(href="")
 					.h_menuline__icon: i.icon-info
 					.h_menuline__info
 						.label Акции
 						.info 7 брендов
-				a.h_menuline__link.d-flex.align-content-center(href="")
+				a.h_menuline__link.d-flex.align-items-center(href="")
 					.h_menuline__icon: i.icon-info
 					.h_menuline__info
 						.label Поставщики
