@@ -4,8 +4,86 @@
   border-bottom: 1px solid #E9EFF2;
   font-size: 12px;
   i[class^=icon-]{
-    font-size: 16px;
+    font-size: 15px;
     vertical-align: middle;
+  }
+
+  .js-user-header{
+    i.icon-info{
+      color: $primary;
+    }
   }
 }
 
+.header__logoline{
+  border-bottom: 1px solid #E9EFF2;
+}
+.header__logo{
+  flex-shrink: 0;
+  img{
+    width: 100%;
+  }
+}
+
+.header__store-info{
+  width: 213px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.header__shop-menu{
+  a{
+    color: $body-color;
+    display: block;
+    width: 62px;
+    flex-shrink: 0;
+    +a{
+      margin-left: 10px;
+    }
+    .icons-block{
+      display: block;
+      font-size: 20px;
+      position: relative;
+      padding-top: 4px;
+      .counter{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: calc(50% - 18px/2 + 14px);
+        top: 0px;
+        background: linear-gradient(180deg, #FF5F1B -6.25%, #FF0000 259.72%);
+        border-radius: 50px;
+        font-size: 9px;
+        text-align: center;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+    }
+    .label{
+      font-size: 12px;
+      line-height: 14px;
+      color: $body-color;
+      font-weight: 500;
+    }
+  }
+}
+.header__search{
+  width: 512px;
+  box-sizing: border-box;
+  position: relative;
+  height: 50px;
+  input.form-control{
+    padding-right: 77px;
+  }
+  button.btn{
+    width: 77px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
