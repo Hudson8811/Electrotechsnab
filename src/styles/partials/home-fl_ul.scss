@@ -1,0 +1,9 @@
+.home-fl_ul{
+  margin-top: 70px;
+}
+.home-fl_ul__tabs{
+  a.active,a.active:hover,a.active:hover:active{
+    background: linear-gradient(180deg, #FF5F1B -6.25%, #FF0000 259.72%);
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.15);
+  }
+}

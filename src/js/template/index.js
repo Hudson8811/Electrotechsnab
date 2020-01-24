@@ -28,6 +28,7 @@ import {tooltip} from './modules/common/popper';
 // import {megaMenu} from './modules/megaMenu';
 
 import 'slick-carousel';
+import 'masonry-layout';
 
 /**
  * Общий функционал для всех страниц
@@ -78,4 +79,16 @@ $(document).ready(function () {
             arrows: true,
         });
     }
+
+    $('.js-catalog-menu').click(function () {
+       event.preventDefault();
+       $(this).toggleClass('active');
+    });
+    $('.js-toggle-fl-ul').click(function () {
+       event.preventDefault();
+       if(!$(this).hasClass('active')){
+           $(this).addClass('active').siblings().removeClass('active');
+           var tabId = $(this).data('tab');
+       }
+    });
 });
