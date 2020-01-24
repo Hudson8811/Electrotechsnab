@@ -1,3 +1,13 @@
 .footer{
-
+  .footer__menu-line{
+    background: linear-gradient(180deg, #0F9BCE -2.17%, #0581BF 126.56%);
+    box-shadow: 0px 6px 20px rgba(116, 116, 116, 0.53);
+    cursor: pointer;
+    display: block;
+    span{
+      display: block;
+      position: relative;
+      color: $white;
+    }
+  }
 }
