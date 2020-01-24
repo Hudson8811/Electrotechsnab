@@ -38,6 +38,7 @@
     "jquery": "^3.4.1",
     "magnific-popup": "^1.1.0",
     "popper.js": "^1.15.0",
-    "selectize": "^0.12.6"
+    "selectize": "^0.12.6",
+    "slick-carousel": "^1.8.1"
   }
 }

@@ -27,6 +27,8 @@ import {tooltip} from './modules/common/popper';
 // import {mobileMenu} from './modules/mobileMenu';
 // import {megaMenu} from './modules/megaMenu';
 
+import 'slick-carousel';
+
 /**
  * Общий функционал для всех страниц
  */
@@ -69,4 +71,8 @@ $(document).ready(function () {
         $(".js-span-data-range").slider({});
         alert(1);
     }
+
+    $('.slick-slider').slick({
+        dots: true,
+    });
 });
