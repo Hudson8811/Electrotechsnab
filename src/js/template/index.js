@@ -21,7 +21,8 @@ import {backToTop} from './modules/common/backToTop';
 import {scrollToAnchor} from './modules/common/scrollToAnchor';
 import {toggleText} from './modules/common/toggleText';
 import {inputDigits} from './modules/common/inputDigits';
-import {slider} from './modules/common/bootstrap-slider';
+//import {slider} from './modules/common/bootstrap-slider';
+import {tooltip} from './modules/common/popper.min';
 
 // import {mobileMenu} from './modules/mobileMenu';
 // import {megaMenu} from './modules/megaMenu';
@@ -51,6 +52,7 @@ indiBlockController.add(backToTop, '.js-back-to-top');
 indiBlockController.add(scrollToAnchor, '.js-to-anchor');
 indiBlockController.add(toggleText, '.js-toggle-text');
 indiBlockController.add(inputDigits, '.js-input-digits');
+indiBlockController.add(tooltip, '.js-tooltip');
 
 //
 // Блоки проекта
