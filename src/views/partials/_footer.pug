@@ -95,38 +95,43 @@ footer.footer
 	.foo-about-us
 		.container
 			.row
-				.foo-about-us-cooperation.col-md-4 Мы открыты к сотрудничеству, принимаем заказы на любой объем продукции.
+				.foo-about-us-cooperation.col-6.col-md-12.col-xl-4
+					.
+						Мы открыты к сотрудничеству, принимаем заказы&nbsp;на любой объем продукции.
 
-				.foo-about-us-payment.col-md-2
+				.foo-about-us-payment.col-6.col-md-4.col-xl-2
 					.foo-about-us-payment__title Принимаем к оплате
 					.foo-about-us-payment-row
 						.foo-about-us-payment-item
 							img(src="images/foo-visa.png", alt="")
 						.foo-about-us-payment-item
 							img(src="images/foo-mc.png", alt="")
-				.foo-about-us-links.col-md-2
+				.foo-about-us-links.col-6.col-md-2.col-xl-2
 					a(href="") Вакансии
 					a(href="") Карта сайта
-				.foo-about-us-contacts.col-md-2
+				.foo-about-us-contacts.col-6.col-md-3.col-xl-2
 					a(href="") Контакты
-					a(href="") Написать нам
-				.foo-about-us-socials.col-md-2
-					.foo-au-social-item
-						a.soc(href="#" target="_blank")
+					a(href="")
+						svg(width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(fill-rule="evenodd" clip-rule="evenodd" d="M6.50043 0.902344C3.31545 0.902344 0.722656 3.17013 0.722656 5.9579C0.722656 8.74567 3.31545 11.0135 6.50043 11.0135C7.09632 11.0128 7.6893 10.9301 8.26266 10.7679L10.2596 12.039C10.3707 12.1103 10.5117 12.1153 10.6275 12.0521C10.7434 11.9889 10.8155 11.8676 10.8157 11.7357V9.30541C11.7285 8.42974 12.2493 7.22276 12.2601 5.9579C12.2782 3.17013 9.68541 0.902344 6.50043 0.902344ZM8.92709 4.51345C9.12656 4.51345 9.2882 4.35179 9.2882 4.15234C9.2882 3.9529 9.12656 3.79123 8.92709 3.79123H4.07378C3.87436 3.79123 3.71267 3.9529 3.71267 4.15234C3.71267 4.35179 3.87436 4.51345 4.07378 4.51345H8.92709ZM5.14627 7.40234C4.94685 7.40234 4.78516 7.56401 4.78516 7.76345C4.78516 7.9629 4.94685 8.12457 5.14627 8.12457H7.8546C8.05402 8.12457 8.21571 7.9629 8.21571 7.76345C8.21571 7.56401 8.05402 7.40234 7.8546 7.40234H5.14627ZM3.97266 5.59679H9.02821C9.22763 5.59679 9.38932 5.75845 9.38932 5.9579C9.38932 6.15734 9.22763 6.31901 9.02821 6.31901H3.97266C3.77323 6.31901 3.61155 6.15734 3.61155 5.9579C3.61155 5.75845 3.77323 5.59679 3.97266 5.59679ZM10.1007 9.15013C10.1011 9.05002 10.1429 8.95457 10.2163 8.88651C11.0533 8.14105 11.5393 7.07866 11.556 5.9579C11.556 3.56735 9.2882 1.62457 6.50043 1.62457C3.71267 1.62457 1.44488 3.56735 1.44488 5.9579C1.44488 8.34845 3.71267 10.2912 6.50043 10.2912C7.08323 10.2918 7.66276 10.2041 8.21933 10.0312C8.32023 9.99999 8.42977 10.0145 8.51903 10.071L10.1007 11.0785V9.15013Z" fill="#1CA4E4")
+						.
+							Написать нам
+				.foo-about-us-socials.col-12.col-md-3.col-xl-2
+					a.foo-au-social-item(href="#" target="_blank")
+						.soc
 							i.icon-soc-vk
 						.
 							Мы Вконтакте
 	.foo-botoom-line
 		.container
 			.row.justify-content-between
-				.col-md-6
-					a © Электротехснаб,
+				.foo-botoom-line-left.col-6
+					a(href="") © Электротехснаб
 					.
-						 2010—2019 г.
-				.col-md-6
+						, 2010—2019 г.
+				.foo-botoom-line-right.col-6
 					a(href="") Создание сайта
-					.
-						-
+					span.foo-bl-r-delimiter —
 					a(href="") Individ
 
 a.back-to-top.js-back-to-top(href="javascript:void(0);") Вверх

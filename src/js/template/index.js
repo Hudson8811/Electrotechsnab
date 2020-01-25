@@ -103,18 +103,18 @@ $(document).ready(function () {
 
             infinite: true,
             slidesToShow: 7,
-            slidesToScroll: 7
+            slidesToScroll: 7,
         });
     }
     if ($('.js-footer-menu-all-cat').length > 0) {
-    $( ".js-footer-menu-all-cat" ).click(function(){ // задаем функцию при нажатиии на элемент с классом toggle
-	    $( ".footer-all-categories" ).toggle(300); //  скрываем, или отображаем все элементы <div>
+    $( ".js-footer-menu-all-cat" ).click(function(){
+	    $( ".footer-all-categories" ).fadeToggle(300);
       });
     }
 
     if ($('.js-foo-ac-close-btn').length > 0) {
-        $( ".js-foo-ac-close-btn" ).click(function(){ // задаем функцию при нажатиии на элемент с классом toggle
-            $( ".footer-all-categories" ).hide(300); //  скрываем, или отображаем все элементы <div>
+        $( ".js-foo-ac-close-btn" ).click(function(){
+            $( ".footer-all-categories" ).fadeOut(300);
           });
         }
 
