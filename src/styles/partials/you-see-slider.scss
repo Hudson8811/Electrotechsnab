@@ -1,0 +1,139 @@
+.product__preview{
+  .inner{
+    background: #FFFFFF;
+    box-shadow: 0px 6px 20px rgba(228, 228, 228, 0.73);
+    border-radius: 8px;
+    padding: 10px 10px 14px;
+  }
+  .product-image{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+  }
+  .product-specials{
+    .type{
+      font-size: 14px;
+      &.special{
+        color: #FF5F1B;
+      }
+      &.hit{
+        color: #FF9B06;
+      }
+    }
+    .sale{
+      background: linear-gradient(180deg, #FF5F1B -6.25%, #FF0000 259.72%);
+      border-radius: 5px;
+      font-size: 12px;
+      line-height: 14px;
+      padding: 2px 4px;
+      color: #FFFFFF;
+    }
+  }
+  .product-title{
+    font-weight: 500;
+  }
+  .code-row{
+    margin-top: 2px;
+    font-size: 9px;
+    line-height: 11px;
+    font-weight: 500;
+    .code{
+      color: $secondary;
+    }
+    .stock{
+      color: #28A745;
+    }
+  }
+  .price-row{
+    margin-top: 13px;
+    .price-side{
+      .price{
+        color: $body-color;
+        font-size: 17px;
+        font-weight: 500;
+      }
+      .old-price{
+        font-size: 12px;
+        line-height: 14px;
+        margin-left: 6px;
+        color: $secondary;
+        text-decoration: line-through;
+      }
+      .offline-price{
+        margin-top: 1px;
+        background: #E5E5E5;
+        border-radius: 3px;
+        padding: 1px 6px;
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 11px;
+        display: inline-block;
+      }
+    }
+    .addition-price{
+      font-size: 12px;
+      line-height: 14px;
+      .price-type{
+        color: $primary;
+      }
+    }
+  }
+  .buttons-row{
+    margin-top: 10px;
+    button{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+
+.you-see_slider{
+  .slick-list{
+    padding: 15px 0;
+  }
+  .slick-slide{
+    width: 255px;
+    margin: 0 15px;
+  }
+
+  .slick-prev, .slick-next{
+    top: -43px;
+    width: 38px;
+    height: 38px;
+    z-index: 100;
+    &::before{
+      content: "\e923";
+      opacity: 1;
+      color: $primary;
+      font-size: 24px;
+      font-family: 'icons';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+    }
+    &:hover{
+      &::before{
+        color: $link-hover-color;
+      }
+    }
+  }
+  .slick-prev{
+    transform: rotate(90deg);
+    left: auto;
+    right: 53px;
+  }
+  .slick-next{
+    transform: rotate(-90deg);
+    right: 15px;
+  }
+}

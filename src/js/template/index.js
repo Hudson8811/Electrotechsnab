@@ -85,6 +85,15 @@ $(document).ready(function () {
             arrows: true,
         });
     }
+    if ($('.you-see_slider').length > 0) {
+        $('.you-see_slider').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+        });
+    }
     $('.js-catalog-menu').click(function () {
         event.preventDefault();
         $(this).toggleClass('active');
@@ -94,6 +103,8 @@ $(document).ready(function () {
         if (!$(this).hasClass('active')) {
             $(this).addClass('active').siblings().removeClass('active');
             var tabId = $(this).data('tab');
+            $('.home-fl_ul__tab').removeClass('active');
+            $('.home-fl_ul__tab[data-tab='+tabId+']').addClass('active');
         }
     });
     if ($('.foo-manufacturers-slider').length > 0) {
@@ -115,12 +126,13 @@ $(document).ready(function () {
     if ($('.js-foo-ac-close-btn').length > 0) {
         $( ".js-foo-ac-close-btn" ).click(function(){
             $( ".footer-all-categories" ).fadeOut(300);
-          });
-        }
+        });
+    }
 
     if ($('.js-masonry-grid').length > 0){
         $('.js-masonry-grid').masonry({
-            itemSelector: '.masonry-item'
+            itemSelector: '.masonry-item',
+            horizontalOrder: true
         });
     }
 });
