@@ -106,6 +106,19 @@
       line-height: 14px;
       font-weight: 500;
     }
+
+    &.mobile-profile{
+      &.dropdown-active{
+        color: #FF5F1B;
+        .icons-block{
+          i[class^=icon-]{
+            &::before{
+              content: "\e91e";
+            }
+          }
+        }
+      }
+    }
   }
 }
 .header__search{
@@ -197,6 +210,7 @@
   z-index: 103;
   margin: 0;
   display: none;
+  max-width: 100%;
   &.active{
     display: block;
   }
@@ -333,6 +347,14 @@
         padding-top: 11px;
         border-top: 1px solid #DDDDDD;
       }
+
+      &.header__managers{
+        display: none;
+        padding: 15px 12px 22px;
+        margin-left: -12px;
+        margin-right: -12px;
+        background: #FAFAFA;
+      }
     }
   }
 }
@@ -381,9 +403,35 @@
     }
   }
 }
+
+@include media-breakpoint-down(lg) {
+  .header__managers.dropdown-menu{
+    display: none !important;
+  }
+
+  .header__city-select{
+    left: 50%;
+    margin-left: -127px;
+  }
+}
 @include media-breakpoint-down(md) {
   .header__search {
     width: 354px;
   }
 }
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(sm) {
+  .header__profile{
+    top: calc(122px - 0.5rem);
+  }
+  .header__city-select{
+    left: auto;
+    right: 0;
+    margin-left: 0;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .header__profile{
+    width: 100%;
+    border-radius: 0;
+  }
+}

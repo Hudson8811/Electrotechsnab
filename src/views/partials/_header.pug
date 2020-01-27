@@ -91,6 +91,29 @@ header.header
 					li: a.profile-link(href="")
 							i.icon-c-docs
 							| Документы
+
+					li.header__managers.d-block.d-md-none
+						.manager-item.d-flex.align-items-start
+							.avatar(style="background-image: url('images/avatar.png')")
+							.manager-info
+								.manager-name.mb-1 Олег Константинопольский
+								.manager-email.d-flex.align-items-center
+									i.icon-email.mr-2
+									.value +7 (8162) 535-051
+								.manager-phone.d-flex.align-items-center
+									i.icon-phone.mr-2
+									a.value(href="mailto:") oleg@eltechsnab.com
+						.manager-item.d-flex.align-items-start
+							.avatar.no-avatar
+							.manager-info
+								.manager-name.mb-1 Олег Боровиков
+								.manager-email.d-flex.align-items-center
+									i.icon-email.mr-2
+									.value +7 (8162) 535-051
+								.manager-phone.d-flex.align-items-center
+									i.icon-phone.mr-2
+									a.value(href="mailto:") oleg@eltechsnab.com
+
 					li: a.profile-link(href="")
 							i.icon-logout
 							| Выйти
@@ -139,6 +162,9 @@ header.header
 							i.icon-cart
 							.counter 99
 						.label.d-none.d-xl-block Корзина
+					a.js-user-header.mobile-profile.text-center.d-block.d-md-none(href="javascript:;")
+						.icons-block
+							i.icon-avatar
 
 	.header__menuline.my-3.d-none.d-xl-block
 		.container
