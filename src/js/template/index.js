@@ -192,19 +192,22 @@ $(document).ready(function () {
             $('.js-mobile-menu .pages-links').hide();
             $('.js-mobile-menu .menu-breadcrumbs').show().find('span').html(bread);
             $(this).parent().siblings().hide();
+            $('.active-sub-cat').addClass('not-active-sub-cat');
             $(this).hide().siblings('.sub-cat').show().addClass('active-sub-cat');
         }
     });
     $('.js-menu-back').click(function (){
         event.preventDefault();
         var $subcat = $('.active-sub-cat');
-        if ($(this).siblings('.sub-cat').length> 0){
-            event.preventDefault();
-            var bread = $(this).html();
-            $('.js-mobile-menu .pages-links').hide();
-            $('.js-mobile-menu .menu-breadcrumbs').show().find('span').html(bread);
-            $(this).parent().siblings().hide();
-            $(this).hide().siblings('.sub-cat').show();
+        $subcat.hide().removeClass('active-sub-cat');
+        $subcat.siblings('.js-sub-cat-check').show().parent().siblings().show();
+        if ($subcat.closest('.not-active-sub-cat').length > 0){
+            var bread = $subcat.closest('.not-active-sub-cat').siblings('.js-sub-cat-check').html();
+            $('.js-mobile-menu .menu-breadcrumbs').find('span').html(bread);
+            $subcat.closest('.not-active-sub-cat').removeClass('not-active-sub-cat').addClass('active-sub-cat');
+        } else {
+            $('.js-mobile-menu .pages-links').show();
+            $('.js-mobile-menu .menu-breadcrumbs').hide();
         }
     });
 
