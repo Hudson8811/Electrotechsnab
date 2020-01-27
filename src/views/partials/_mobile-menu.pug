@@ -7,25 +7,56 @@
         a(href="") Акции
         a(href="") Поставщики
 
+    .menu-breadcrumbs
+        a.js-menu-back(href="javascript:;")
+            i.icon-arrow-back.mr-2
+            span
+
     ul.mobile-catalog
-        li: a(href="" data-cat="0") Метизы, крепёж
-        li: a(href="" data-cat="1") Лампы, LED лента
-        li: a(href="" data-cat="2") Светильники / Лента LED / Аксессуары
-        li: a(href="" data-cat="3") Кабель провод
-        li: a(href="" data-cat="4") Кабель-канал, Трубы, Лотки
-        li: a(href="" data-cat="5") Аппаратура защиты модульная
-        li: a(href="" data-cat="6") Шкафы / Корпуса / НКУ / Аксессуары
-        li: a(href="" data-cat="7") Счетчики электроэнергии
-        li: a(href="" data-cat="8") Розетки / Выключатели / Коробки / Звонки / Таймеры
-        li: a(href="" data-cat="9") Удлинители / Колодки / Вилки / Разъёмы
-        li: a(href="" data-cat="10") Батарейки / Аккумуляторы
-        li: a(href="" data-cat="11") Арматура кабельная (СИП, ЛЭП) / муфты / наконечники
-        li: a(href="" data-cat="12") Электромонтажные материалы
-        li: a(href="" data-cat="13") Контакторы / Рубильники / Выключатели нагрузки
-        li: a(href="" data-cat="14") Устройства защиты / контроля / управления
-        li: a(href="" data-cat="15") Электронагревательное оборудование
-        li: a(href="" data-cat="16") Инструмент
-        li: a(href="" data-cat="17") Электродвигатели / Вентиляторы / Насосы
-        li: a(href="" data-cat="18") Пожарно-охранное оборудование
-        li: a(href="" data-cat="19") Средства электрозащиты
-        li: a(href="" data-cat="20") Оборудование 6-10 кВ
+        li: a.js-sub-cat-check(href="") Метизы, крепёж
+            ul.sub-cat(data-cat="0")
+                li: a.js-sub-cat-check(href="") Лента открытая IP20, 12V
+                li: a.js-sub-cat-check(href="") Лента защищённая IP65, 12V
+                li: a.js-sub-cat-check(href="") Блоки питания для ленты 12V
+                li: a.js-sub-cat-check(href="") Коннекторы для ленты 12V
+                li: a.js-sub-cat-check(href="") Контроллеры для ленты 12V
+                li: a.js-sub-cat-check(href="") Лента на напряжение 220В
+                li: a.js-sub-cat-check(href="") Профили
+        li: a(href="") Лампы, LED лента
+            ul.sub-cat(data-cat="0")
+                li: a.js-sub-cat-check(href="") Лента LED
+                    ul.sub-cat(data-cat="0")
+                        li: a.js-sub-cat-check(href="") Лента открытая IP20, 12V
+                        li: a.js-sub-cat-check(href="") Лента защищённая IP65, 12V
+                        li: a.js-sub-cat-check(href="") Блоки питания для ленты 12V
+                        li: a.js-sub-cat-check(href="") Коннекторы для ленты 12V
+                        li: a.js-sub-cat-check(href="") Контроллеры для ленты 12V
+                        li: a.js-sub-cat-check(href="") Лента на напряжение 220В
+                        li: a.js-sub-cat-check(href="") Профили
+                li: a.js-sub-cat-check(href="") Патроны / дросселя / ЭПРА
+                li: a.js-sub-cat-check(href="") Для производственных и складских помещений
+                li: a.js-sub-cat-check(href="") Для общественных и бытовых помещений
+                li: a.js-sub-cat-check(href="") Уличные
+                li: a.js-sub-cat-check(href="") Садово-парковые прожекторы
+                li: a.js-sub-cat-check(href="") Точечные
+                li: a.js-sub-cat-check(href="") Аварийные / автономные
+                li: a.js-sub-cat-check(href="") Декоративная светотехника
+        li: a(href="") Светильники / Лента LED / Аксессуары
+        li: a(href="") Кабель провод
+        li: a(href="") Кабель-канал, Трубы, Лотки
+        li: a(href="") Аппаратура защиты модульная
+        li: a(href="") Шкафы / Корпуса / НКУ / Аксессуары
+        li: a(href="") Счетчики электроэнергии
+        li: a(href="") Розетки / Выключатели / Коробки / Звонки / Таймеры
+        li: a(href="") Удлинители / Колодки / Вилки / Разъёмы
+        li: a(href="") Батарейки / Аккумуляторы
+        li: a(href="") Арматура кабельная (СИП, ЛЭП) / муфты / наконечники
+        li: a(href="") Электромонтажные материалы
+        li: a(href="") Контакторы / Рубильники / Выключатели нагрузки
+        li: a(href="") Устройства защиты / контроля / управления
+        li: a(href="") Электронагревательное оборудование
+        li: a(href="") Инструмент
+        li: a(href="") Электродвигатели / Вентиляторы / Насосы
+        li: a(href="") Пожарно-охранное оборудование
+        li: a(href="") Средства электрозащиты
+        li: a(href="") Оборудование 6-10 кВ

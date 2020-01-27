@@ -185,6 +185,29 @@ $(document).ready(function () {
         }, 0);
     });
 
+    $('.js-sub-cat-check').click(function (){
+        if ($(this).siblings('.sub-cat').length> 0){
+            event.preventDefault();
+            var bread = $(this).html();
+            $('.js-mobile-menu .pages-links').hide();
+            $('.js-mobile-menu .menu-breadcrumbs').show().find('span').html(bread);
+            $(this).parent().siblings().hide();
+            $(this).hide().siblings('.sub-cat').show().addClass('active-sub-cat');
+        }
+    });
+    $('.js-menu-back').click(function (){
+        event.preventDefault();
+        var $subcat = $('.active-sub-cat');
+        if ($(this).siblings('.sub-cat').length> 0){
+            event.preventDefault();
+            var bread = $(this).html();
+            $('.js-mobile-menu .pages-links').hide();
+            $('.js-mobile-menu .menu-breadcrumbs').show().find('span').html(bread);
+            $(this).parent().siblings().hide();
+            $(this).hide().siblings('.sub-cat').show();
+        }
+    });
+
 
     $('.js-catalog-menu').click(function () {
         event.preventDefault();

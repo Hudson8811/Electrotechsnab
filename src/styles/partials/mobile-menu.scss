@@ -25,6 +25,13 @@
       margin: 2.5px 10px;
     }
   }
+  .menu-breadcrumbs{
+    display: none;
+    align-items: center;
+    background: $white;
+    flex-shrink: 0;
+    padding: 11px 20px;
+  }
   .mobile-catalog{
     list-style: none;
     background: #E9EFF2;
@@ -37,6 +44,11 @@
       &:hover{
         color: $link-hover-color;
       }
+    }
+    .sub-cat{
+      list-style: none;
+      display: none;
+      padding: 0;
     }
   }
 }
