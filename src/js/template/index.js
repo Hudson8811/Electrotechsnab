@@ -23,7 +23,7 @@ import { toggleText } from './modules/common/toggleText';
 import { inputDigits } from './modules/common/inputDigits';
 import { tooltip } from './modules/common/popper';
 
-import { rangeSliderUI } from './modules/rangeSliderUI';
+//import { rangeSliderUI } from './modules/rangeSliderUI';
 
 // import {mobileMenu} from './modules/mobileMenu';
 //import { megaMenu } from './modules/megaMenu';
@@ -95,7 +95,10 @@ $(document).ready(function () {
             arrows: true,
             responsive: [
                 {
-                    arrows: false,
+                    breakpoint: 767.98,
+                    settings: {
+                        arrows: false,
+                    }
                 },
             ]
         });

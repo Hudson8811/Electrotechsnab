@@ -140,6 +140,10 @@
 .h_menuline__link{
   flex-grow: 1;
   color: #FFFFFF;
+  .h_menuline__icon{
+    width: 2rem;
+    text-align: center;
+  }
   &:visited{
     color: #FFFFFF;
   }
@@ -155,6 +159,14 @@
       background: -webkit-linear-gradient(180deg, #FF5F1B -6.25%, #FF0000 259.72%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    .h_menuline__icon{
+      i[class^=icon-]{
+        font-size: 18px;
+        &::before{
+          content: "\e91e"
+        }
+      }
     }
   }
 }
@@ -327,7 +339,51 @@
 
 
 @include media-breakpoint-down(lg) {
-
+  .header__shop-menu{
+    a{
+      width: 40px;
+    }
+  }
+  .header__topline {
+    .header__user-block {
+      i.icon-avatar {
+        font-size: 28px;
+        color: $body-color;
+      }
+    }
+    .user-header__info{
+      .user-name{
+        color: $body-color;
+        &:hover{
+          color: $link-hover-color;
+        }
+      }
+      .user-company{
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 11px;
+        color: $secondary;
+      }
+    }
+  }
+  .header__search {
+    height: 38px;
+  }
+  .header__topline {
+    border-bottom: none;
+  }
+  .header__logoline {
+    border-bottom: 1px solid #E9EFF2;
+    .container {
+      > div {
+        border-bottom: none;
+      }
+    }
+  }
 }
-@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(md) {
+  .header__search {
+    width: 354px;
+  }
+}
 @include media-breakpoint-down(sm) {}
