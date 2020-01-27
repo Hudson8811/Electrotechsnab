@@ -142,6 +142,12 @@ i {
     content: $icon-eye-closed; 
   }
 }
+
+.icon-file {
+  &:before {
+    content: $icon-file;
+  }
+}
 .icon-file-ppt {
   &:before {
     content: $icon-file-ppt; 
@@ -240,11 +246,6 @@ i {
 .icon-calendar {
   &:before {
     content: $icon-calendar; 
-  }
-}
-.icon-file {
-  &:before {
-    content: $icon-file; 
   }
 }
 .icon-danger {
