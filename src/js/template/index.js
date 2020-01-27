@@ -162,9 +162,21 @@ $(document).ready(function () {
     if ($('.js-masonry-grid').length > 0) {
         $('.js-masonry-grid').masonry({
             itemSelector: '.masonry-item',
-            horizontalOrder: true
+            horizontalOrder: true,
+            percentPosition: true
         });
     }
+
+
+    $('.js-mobile-menu-toggle').click(function () {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $('body').toggleClass('mobile-menu-active');
+        $('.mobile-menu').toggleClass('active');
+        $('body,html').animate({
+            scrollTop: 0
+        }, 0);
+    });
 
 
     $('.js-catalog-menu').click(function () {

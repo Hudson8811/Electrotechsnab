@@ -199,6 +199,20 @@
   }
 }
 
+.h_menuline__mobile-link{
+  i[class^="icon-"]{
+    width: 36px;
+    text-align: center;
+  }
+  &.active{
+    color: #FF5F1B;
+    i[class^="icon-"]{
+      &::before{
+        content: "\e91e";
+      }
+    }
+  }
+}
 
 .dropdown-menu{
   background: #FFFFFF;
