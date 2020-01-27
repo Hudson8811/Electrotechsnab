@@ -4,7 +4,6 @@
 
 	.page-item {
 		margin-bottom: 0;
-
 		&.active{
 			.page-link{
 				background-color: transparent;
@@ -15,8 +14,10 @@
 	}
 
 	.page-link {
+		min-width: 21px;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		height: 100%;
 		padding: 0.15rem 0.4rem;
 		border:0;

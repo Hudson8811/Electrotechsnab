@@ -21,8 +21,9 @@ import { backToTop } from './modules/common/backToTop';
 import { scrollToAnchor } from './modules/common/scrollToAnchor';
 import { toggleText } from './modules/common/toggleText';
 import { inputDigits } from './modules/common/inputDigits';
-//import {slider} from './modules/common/bootstrap-slider';
 import { tooltip } from './modules/common/popper';
+
+import { rangeSliderUI } from './modules/rangeSliderUI';
 
 // import {mobileMenu} from './modules/mobileMenu';
 //import { megaMenu } from './modules/megaMenu';
@@ -33,7 +34,18 @@ import 'masonry-layout';
 var $ = require('jquery');
 var jQueryBridget = require('jquery-bridget');
 var Masonry = require('masonry-layout');
-jQueryBridget( 'masonry', Masonry, $ );
+jQueryBridget('masonry', Masonry, $);
+
+
+
+///////////////////
+require('../libs/jquery-ui.min.js');
+require('../libs/jquery.ui.touch-punch.min.js');
+/////////////////
+
+
+
+
 
 /**
  * Общий функционал для всех страниц
@@ -61,7 +73,6 @@ indiBlockController.add(scrollToAnchor, '.js-to-anchor');
 indiBlockController.add(toggleText, '.js-toggle-text');
 indiBlockController.add(inputDigits, '.js-input-digits');
 indiBlockController.add(tooltip, '.js-tooltip');
-
 //
 // Блоки проекта
 //
@@ -118,7 +129,7 @@ $(document).ready(function () {
             $(this).addClass('active').siblings().removeClass('active');
             var tabId = $(this).data('tab');
             $('.home-fl_ul__tab').removeClass('active');
-            $('.home-fl_ul__tab[data-tab='+tabId+']').addClass('active');
+            $('.home-fl_ul__tab[data-tab=' + tabId + ']').addClass('active');
         }
     });
     if ($('.foo-manufacturers-slider').length > 0) {
@@ -132,23 +143,24 @@ $(document).ready(function () {
         });
     }
     if ($('.js-footer-menu-all-cat').length > 0) {
-    $( ".js-footer-menu-all-cat" ).click(function(){
-	    $( ".footer-all-categories" ).fadeToggle(300);
-      });
-    }
-
-    if ($('.js-foo-ac-close-btn').length > 0) {
-        $( ".js-foo-ac-close-btn" ).click(function(){
-            $( ".footer-all-categories" ).fadeOut(300);
+        $(".js-footer-menu-all-cat").click(function () {
+            $(".footer-all-categories").fadeToggle(300);
         });
     }
 
-    if ($('.js-masonry-grid').length > 0){
+    if ($('.js-foo-ac-close-btn').length > 0) {
+        $(".js-foo-ac-close-btn").click(function () {
+            $(".footer-all-categories").fadeOut(300);
+        });
+    }
+
+    if ($('.js-masonry-grid').length > 0) {
         $('.js-masonry-grid').masonry({
             itemSelector: '.masonry-item',
             horizontalOrder: true
         });
     }
+
 
     $('.js-catalog-menu').click(function () {
         event.preventDefault();
@@ -191,6 +203,30 @@ $(document).ready(function () {
         $('.js-city-select').removeClass('dropdown-active');
         $('.header__city-select').removeClass('active');
     });
+
+
+    $(".js-range-slider-price").each(function (index, element) {
+        var leftDigit = $(element).siblings('.range-slider-price-digits').find('.js-rsp-digits-left');
+        var rightDigit = $(element).siblings('.range-slider-price-digits').find('.js-rsp-digits-right');
+        $(element).slider({
+            range: true,
+            values: [1000, 3000],
+            min: 0,
+            max: 5000,
+            slide: function (event, ui) {
+                leftDigit.html(ui.values[0]);
+                rightDigit.html(ui.values[1]);
+            }
+        });
+        leftDigit.html($(element).slider("values", 0));
+        rightDigit.html($(element).slider("values", 1));
+
+    });
+
+
+
+
+
 });
 
 
