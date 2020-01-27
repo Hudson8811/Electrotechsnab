@@ -5,4 +5,38 @@
 }
 .mobile-menu{
   position: fixed;
+  height: calc(100vh - 123px);
+  top: 123px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  flex-direction: column;
+  display: none;
+  &.active{
+    display: flex;
+  }
+  .pages-links{
+    background: $white;
+    flex-shrink: 0;
+    padding: 7px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    a{
+      margin: 2.5px 10px;
+    }
+  }
+  .mobile-catalog{
+    list-style: none;
+    background: #E9EFF2;
+    padding: 23px 20px;
+    max-height: 100%;
+    overflow: auto;
+    margin-bottom: 0;
+    a{
+      color: $body-color;
+      &:hover{
+        color: $link-hover-color;
+      }
+    }
+  }
 }

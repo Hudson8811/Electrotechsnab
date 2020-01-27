@@ -212,6 +212,22 @@
   .home-fl_ul__ul-cats{
     column-count: 2;
   }
+  .home-fl_ul__toggle{
+    a{
+      font-size: 16px;
+      line-height: 19px;
+      &:not(.active){
+        border: 1px solid $primary;
+        color: $primary;
+      background: $white !important;
+        &:hover {
+          border-color: $link-hover-color;
+          color:  $link-hover-color;
+        }
+      }
+    }
+  }
+
 }
 @include media-breakpoint-down(sm) {
   .home-fl_ul__ul-cats{
