@@ -30,6 +30,7 @@ import { tooltip } from './modules/common/popper';
 
 import 'slick-carousel';
 
+
 import 'masonry-layout';
 var $ = require('jquery');
 var jQueryBridget = require('jquery-bridget');
@@ -37,10 +38,11 @@ var Masonry = require('masonry-layout');
 jQueryBridget('masonry', Masonry, $);
 
 
-
+require('jquery-ui-bundle');
+import 'jquery-ui-touch-punch';
 ///////////////////
-require('../libs/jquery-ui.min.js');
-require('../libs/jquery.ui.touch-punch.min.js');
+//require('../libs/jquery-ui.min.js');
+//require('../libs/jquery.ui.touch-punch.min.js');
 /////////////////
 
 
