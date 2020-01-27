@@ -416,9 +416,7 @@
       }
     }
   }
-}
 
-@include media-breakpoint-down(lg) {
   .header__managers.dropdown-menu{
     display: none !important;
   }

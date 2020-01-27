@@ -250,7 +250,11 @@ img {
 .footer-all-categories {
   display: none;
 }
-
+@include media-breakpoint-down(lg) {
+  .footer-all-categories {
+    display: none !important;
+  }
+}
 @media (min-width: 1200px) {
   // .container-xl
 

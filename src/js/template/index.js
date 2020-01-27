@@ -159,11 +159,13 @@ $(document).ready(function () {
 
     if ($('.js-masonry-grid').length > 0) {
         $('.js-masonry-grid').isotope({
-            itemSelector: '.masonry-item',
-            horizontalOrder: true,
-            percentPosition: true,
             getSortData: {
                 order: '[data-mobile-order]'
+            },
+            masonry: {
+                itemSelector: '.masonry-item',
+                horizontalOrder: true,
+                percentPosition: true,
             }
         });
         mansorySort();
