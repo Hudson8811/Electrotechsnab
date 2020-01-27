@@ -3,7 +3,7 @@
  */
 
 export const megaMenu = () => {
-	$('.js-mega-menu').hover(
+	/*$('.js-mega-menu').hover(
 		function () {
 			$('#' + $(this).data('mega-menu-id')).addClass('active');
 		},
@@ -20,5 +20,7 @@ export const megaMenu = () => {
 		function () {
 			$('[data-mega-menu-id="' + this.id + '"]').removeClass('active');
 		}
-	);
+	);*/
+
+
 };

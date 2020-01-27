@@ -1,41 +1,113 @@
+.shadow-bg
 header.header
 	.header__topline.py-2
-		.container
+		.container.position-relative
 			.d-flex.justify-content-between.align-items-center
-				.left-side.d-flex.align-items-center
+				a.header__logo.align-items-center.d-flex.d-xl-none(href="")
+					img(src="images/logo.svg" alt="")
+				.left-side.d-flex.flex-column.flex-md-row.align-items-end.align-items-md-center
 					a.js-city-select(href="javascript:;")
 						i.icon-place.mr-1
-						| Великий Новгород
-					.phone.mx-2 +7 (8162) 535-051
-					.header__menu.mx-2
-						a.mx-2(href="") Контакты
-						a.mx-2(href="") Доставка и оплата
-						a.mx-2(href="") Возврат
-						a.mx-2(href="") О компании
-					a.contact-link.mx-2(href="")
-						//- заменить иконку
-						i.icon-info.mr-1
-						| Написать нам
+						span Великий Новгород
+					.d-flex.flex-column.flex-xl-row.align-items-start.align-items-lg-center
+						.phone.mx-2 +7 (8162) 535-051
+						.header__menu.mx-2.d-none.d-xl-block
+							a.mx-2(href="") Контакты
+							a.mx-2(href="") Доставка и оплата
+							a.mx-2(href="") Возврат
+							a.mx-2(href="") О компании
+						a.contact-link.mx-2.d-none.d-mb-block(href="")
+							i.icon-chat.mr-1.d-none.d-xl-inline
+							| Написать нам
 
-				.right-side.d-flex.align-items-center
-					a.js-header-managers(href="javascript:;")
+				.right-side.align-items-center.d-none.d-md-flex
+					a.js-header-managers.d-none.d-xl-block(href="javascript:;")
 						| Личные менеджеры
 						i.icon-dropdown.ml-1
-					.header__user-block.js-user-header.d-flex.ml-4
-						//- заменить иконку
-						i.icon-info.mr-1
+					.header__user-block.d-flex.ml-4
+						i.icon-avatar.mr-1
 						.user-header__info
-							a.user-name(href="javascript:;")
+							a.user-name.js-user-header(href="javascript:;")
 								| Павел Константинопольский
 								i.icon-dropdown.ml-1
 							.user-company ООО «Кабельный альянс»
 
+			.header__city-select.dropdown-menu.position-absolute
+				p От выбранного города зависят цены, наличие товара и способы доставки
+				ul.city-list
+					li: a.js-city-choose.active(href="javascript:;") Вологда
+					li: a.js-city-choose(href="javascript:;") В.Новогород
+					li: a.js-city-choose(href="javascript:;") Череповец
+					li: a.js-city-choose(href="javascript:;") В.Устюг
+					li: a.js-city-choose(href="javascript:;") Архангельск
+					li: a.js-city-choose(href="javascript:;") Вельск
+					li: a.js-city-choose(href="javascript:;") Боровичи
+					li: a.js-city-choose(href="javascript:;") Рыбинск
+
+			.header__managers.dropdown-menu.position-absolute
+				.manager-item.d-flex.align-items-start
+					.avatar(style="background-image: url('images/avatar.png')")
+					.manager-info
+						.manager-name.mb-1 Олег Константинопольский
+						.manager-email.d-flex.align-items-center
+							i.icon-email.mr-2
+							.value +7 (8162) 535-051
+						.manager-phone.d-flex.align-items-center
+							i.icon-phone.mr-2
+							a.value(href="mailto:") oleg@eltechsnab.com
+				.manager-item.d-flex.align-items-start
+					.avatar.no-avatar
+					.manager-info
+						.manager-name.mb-1 Олег Боровиков
+						.manager-email.d-flex.align-items-center
+							i.icon-email.mr-2
+							.value +7 (8162) 535-051
+						.manager-phone.d-flex.align-items-center
+							i.icon-phone.mr-2
+							a.value(href="mailto:") oleg@eltechsnab.com
+
+			.header__profile.dropdown-menu.position-absolute
+				.profile-status
+					.d-block Баланс: <span>79 800,10 ₽</span>
+					.d-block Общая задолженность: <span>79 800,10 ₽</span>
+					.d-block Просроченная задолженность: <span>79 800,10 ₽</span>
+				ul.profile-menu
+					li: a.profile-link(href="")
+							i.icon-c-profile
+							| Профиль
+					li: a.profile-link(href="")
+							i.icon-c-orders
+							| Заказы
+					li: a.profile-link(href="")
+							i.icon-heart
+							| Избранное
+					li: a.profile-link(href="")
+							i.icon-cart
+							| Корзина
+							span.counter 103
+					li: a.profile-link(href="")
+							i.icon-cart-favs
+							| Избранные корзины
+					li: a.profile-link(href="")
+							i.icon-c-docs
+							| Документы
+					li: a.profile-link(href="")
+							i.icon-logout
+							| Выйти
+
+
+
 	.header__logoline
 		.container
 			.d-flex.align-items-center.justify-content-between.py-3
-				a.header__logo.d-flex.align-items-center(href="")
+				a.h_menuline__mobile-link.js-mobile-menu.align-items-center.justify-content-center.d-flex.d-xl-none(href="javascript:;")
+					.h_menuline__icon: i.icon-catalog
+					.h_menuline__info
+						.label Каталог
+						.info 12 583 товара
+				a.header__logo.align-items-center.d-none.d-xl-flex(href="")
 					img(src="images/logo.svg" alt="")
-				.header__store-info.ml-4
+				.header__store-info.ml-4.d-none.d-xl-block
 					| Интернет-магазин
 					=' '
 					a(href="") Проводов,
@@ -49,58 +121,57 @@ header.header
 					a(href="") Светотехники
 					=' '
 					| и еще 32 категорий
-				form.header__search.d-flex.align-items-center.ml-3
+				form.header__search.d-none.d-md-flex.align-items-center.ml-3
 					input.form-control.h-100(placeholder="Поиск по наименованию, артикулу")
-					//- заменить иконку
-					button.btn.btn-base.h-100: i.icon-info
+					button.btn.btn-base.h-100: i.icon-search
 				.header__shop-menu.d-flex.align-items-center.ml-4
-					//- заменить иконки
+					a.text-center.d-none.d-md-block(href="")
+						.icons-block
+							i.icon-orders
+						.label.d-none.d-xl-block Заказы
 					a.text-center(href="")
 						.icons-block
-							i.icon-info
-						.label Заказы
-					a.text-center(href="")
-						.icons-block
-							i.icon-info
+							i.icon-heart
 							.counter 99
-						.label Избранное
+						.label.d-none.d-xl-block Избранное
 					a.text-center(href="")
 						.icons-block
-							i.icon-info
+							i.icon-cart
 							.counter 99
-						.label Корзина
+						.label.d-none.d-xl-block Корзина
 
-	.header__menuline.my-3
+	.header__menuline.my-3.d-none.d-xl-block
 		.container
 			.h_menuline.d-flex.justify-content-between
-				//- заменить иконки
 				a.h_menuline__link.js-catalog-menu.d-flex.align-items-center.justify-content-center(href="javascript:;")
-					.h_menuline__icon: i.icon-info
+					.h_menuline__icon: i.icon-catalog
 					.h_menuline__info
 						.label Каталог
 						.info 12 583 товара
 				a.h_menuline__link.d-flex.align-items-center.justify-content-center(href="")
-					.h_menuline__icon: i.icon-info
+					.h_menuline__icon: i.icon-sales
 					.h_menuline__info
 						.label Распродажа
 						.info скидки до 70%
 				a.h_menuline__link.d-flex.align-items-center.justify-content-center(href="")
-					.h_menuline__icon: i.icon-info
+					.h_menuline__icon: i.icon-news
 					.h_menuline__info
 						.label Новинки
 						.info 1 000 товаров
 				a.h_menuline__link.d-flex.align-items-center.justify-content-center(href="")
-					.h_menuline__icon: i.icon-info
+					.h_menuline__icon: i.icon-specials
 					.h_menuline__info
 						.label Лучшие предложения
 						.info 1 000 товаров
 				a.h_menuline__link.d-flex.align-items-center.justify-content-center(href="")
-					.h_menuline__icon: i.icon-info
+					.h_menuline__icon: i.icon-deals
 					.h_menuline__info
 						.label Акции
 						.info 7 брендов
 				a.h_menuline__link.d-flex.align-items-center.justify-content-center(href="")
-					.h_menuline__icon: i.icon-info
+					.h_menuline__icon: i.icon-delivery-truck-boxes
 					.h_menuline__info
 						.label Поставщики
 						.info 37 брендов
+
+		include _mega-menu

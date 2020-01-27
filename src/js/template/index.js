@@ -25,7 +25,7 @@ import { inputDigits } from './modules/common/inputDigits';
 import { tooltip } from './modules/common/popper';
 
 // import {mobileMenu} from './modules/mobileMenu';
-// import {megaMenu} from './modules/megaMenu';
+//import { megaMenu } from './modules/megaMenu';
 
 import 'slick-carousel';
 
@@ -33,7 +33,6 @@ import 'masonry-layout';
 var $ = require('jquery');
 var jQueryBridget = require('jquery-bridget');
 var Masonry = require('masonry-layout');
-// make Masonry a jQuery plugin
 jQueryBridget( 'masonry', Masonry, $ );
 
 /**
@@ -68,7 +67,7 @@ indiBlockController.add(tooltip, '.js-tooltip');
 //
 
 // indiBlockController.add(mobileMenu, '.js-mobile-menu');
-// indiBlockController.add(megaMenu, '.js-mega-menu');
+//indiBlockController.add(megaMenu, '.js-catalog-menu');
 
 // первичная инициализация
 indiBlockController.initAll();
@@ -83,6 +82,11 @@ $(document).ready(function () {
         $('.home-slider').slick({
             dots: true,
             arrows: true,
+            responsive: [
+                {
+                    arrows: false,
+                },
+            ]
         });
     }
     if ($('.you-see_slider').length > 0) {
@@ -92,12 +96,22 @@ $(document).ready(function () {
             infinite: true,
             slidesToShow: 4,
             slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1199.98,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },{
+                    breakpoint: 767.98,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+            ]
         });
     }
-    $('.js-catalog-menu').click(function () {
-        event.preventDefault();
-        $(this).toggleClass('active');
-    });
+
     $('.js-toggle-fl-ul').click(function () {
         event.preventDefault();
         if (!$(this).hasClass('active')) {
@@ -135,4 +149,63 @@ $(document).ready(function () {
             horizontalOrder: true
         });
     }
+
+    $('.js-catalog-menu').click(function () {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        shadowBg($(this).hasClass('active'));
+        toggleMegaMenu($(this).hasClass('active'));
+    });
+
+    $('.js-mega-menu__cat-select').on('mouseenter', function () {
+        var cat = $(this).data('cat');
+        $('.js-mega-menu__cat-select').removeClass('active');
+        $(this).addClass('active');
+        $('.mega-menu__sub-cats').removeClass('active');
+        $('.mega-menu__sub-cats[data-cat="'+cat+'"]').addClass('active');
+    });
+
+    $('.shadow-bg').click(function () {
+        toggleMegaMenu(false);
+        shadowBg(false);
+        $('.js-catalog-menu').removeClass('active');
+    });
+
+    $('.js-city-select').click(function () {
+        event.preventDefault();
+       $(this).toggleClass('dropdown-active');
+       $('.header__city-select').toggleClass('active');
+    });
+    $('.js-header-managers').click(function () {
+        event.preventDefault();
+        $(this).toggleClass('dropdown-active');
+        var position = $(this).position();
+        $('.header__managers').toggleClass('active').css('left', position.left + 30);
+    });
+    $('.js-user-header').click(function () {
+        event.preventDefault();
+        $(this).toggleClass('dropdown-active');
+        $('.header__profile').toggleClass('active');
+    });
+    $('.js-city-choose').click(function () {
+        $('.js-city-select').removeClass('dropdown-active');
+        $('.header__city-select').removeClass('active');
+    });
 });
+
+
+function shadowBg(status) {
+    if (status){
+        $('body').addClass('shadow-bg-active');
+    } else {
+        $('body').removeClass('shadow-bg-active');
+    }
+}
+
+function toggleMegaMenu(status) {
+    if (status){
+        $('.mega-menu').addClass('active');
+    } else {
+        $('.mega-menu').removeClass('active');
+    }
+}

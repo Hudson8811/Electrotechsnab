@@ -2,16 +2,17 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ore9b4') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ore9b4') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ore9b4##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?fjp3s9');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?fjp3s9#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?fjp3s9') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?fjp3s9') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?fjp3s9##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+i {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
   speak: none;
@@ -26,6 +27,101 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cart-favs {
+  &:before {
+    content: $icon-cart-favs; 
+  }
+}
+.icon-c-docs {
+  &:before {
+    content: $icon-c-docs; 
+  }
+}
+.icon-c-orders {
+  &:before {
+    content: $icon-c-orders; 
+  }
+}
+.icon-c-profile {
+  &:before {
+    content: $icon-c-profile; 
+  }
+}
+.icon-email {
+  &:before {
+    content: $icon-email; 
+  }
+}
+.icon-logout {
+  &:before {
+    content: $icon-logout; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}
+.icon-chat {
+  &:before {
+    content: $icon-chat; 
+  }
+}
+.icon-catalog {
+  &:before {
+    content: $icon-catalog; 
+  }
+}
+.icon-avatar {
+  &:before {
+    content: $icon-avatar; 
+  }
+}
+.icon-delivery-truck-boxes {
+  &:before {
+    content: $icon-delivery-truck-boxes; 
+  }
+}
+.icon-news {
+  &:before {
+    content: $icon-news; 
+  }
+}
+.icon-orders {
+  &:before {
+    content: $icon-orders; 
+  }
+}
+.icon-sales {
+  &:before {
+    content: $icon-sales; 
+  }
+}
+.icon-specials {
+  &:before {
+    content: $icon-specials; 
+  }
+}
+.icon-deals {
+  &:before {
+    content: $icon-deals; 
+  }
+}
+.icon-cart {
+  &:before {
+    content: $icon-cart; 
+  }
+}
+.icon-heart {
+  &:before {
+    content: $icon-heart; 
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
 .icon-lock {
   &:before {
     content: $icon-lock; 
@@ -39,11 +135,6 @@
 .icon-eye-closed {
   &:before {
     content: $icon-eye-closed; 
-  }
-}
-.icon-file {
-  &:before {
-    content: $icon-file; 
   }
 }
 .icon-file-ppt {
@@ -144,6 +235,11 @@
 .icon-calendar {
   &:before {
     content: $icon-calendar; 
+  }
+}
+.icon-file {
+  &:before {
+    content: $icon-file; 
   }
 }
 .icon-danger {

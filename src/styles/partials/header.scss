@@ -1,16 +1,51 @@
-// header
+// shadow
+.shadow-bg{
+  background: rgba(29, 29, 29, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 10;
+}
+.shadow-bg-active{
+  z-index: 101;
+  position: relative;
+  .shadow-bg{
+    display: block;
+  }
+  .header{
+    z-index: 102;
+  }
+}
 
+// header
+.header{
+  background: #FFFFFF;
+}
 .header__topline{
   border-bottom: 1px solid #E9EFF2;
   font-size: 12px;
   i[class^=icon-]{
-    font-size: 15px;
+    font-size: 11px;
     vertical-align: middle;
+  }
+  i.icon-place{
+    font-size: 14px;
   }
 
   .header__user-block{
-    i.icon-info{
+    i.icon-avatar{
       color: $primary;
+      font-size: 16px;
+    }
+  }
+
+  .dropdown-active{
+    i.icon-dropdown{
+      transform: rotate(180deg);
+      display: inline-block;
     }
   }
 }
@@ -38,6 +73,9 @@
     display: block;
     width: 62px;
     flex-shrink: 0;
+    &:hover{
+      color: $link-hover-color;
+    }
     +a{
       margin-left: 10px;
     }
@@ -66,7 +104,6 @@
     .label{
       font-size: 12px;
       line-height: 14px;
-      color: $body-color;
       font-weight: 500;
     }
   }
@@ -90,7 +127,9 @@
   }
 }
 
-
+.header__menuline{
+  position: relative;
+}
 .h_menuline{
   background: linear-gradient(180deg, #0F9BCE -2.17%, #0581BF 126.56%);
   box-shadow: 0px 6px 20px rgba(116, 116, 116, 0.53);
@@ -121,6 +160,7 @@
 }
 .h_menuline__icon{
   margin-right: 5px;
+  font-size: 23px;
 }
 .h_menuline__info{
   .label{
@@ -133,3 +173,161 @@
     line-height: 12px;
   }
 }
+
+
+.dropdown-menu{
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  box-shadow: 0px 6px 20px rgba(116, 116, 116, 0.53);
+  border-radius: 8px;
+  top: calc(100% + 0.5rem);
+  z-index: 103;
+  margin: 0;
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+
+.header__city-select{
+  left: 0;
+  padding: 14px 15px;
+  width: 255px;
+  p{
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .city-list{
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    li{
+      margin-bottom: 4px;
+      a{
+        line-height: 1.6;
+        &.active{
+          color: $body-color;
+        }
+      }
+    }
+  }
+}
+
+.header__managers{
+  padding: 18px 19px 29px;
+  .manager-item{
+    +.manager-item{
+      margin-top: 25px;
+    }
+    .avatar{
+      background-position: center;
+      background-size: cover;
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      margin-right: 10px;
+      &.no-avatar{
+        background-image: url('images/no-avatar.svg');
+      }
+    }
+    .manager-info{
+      .manager-name {
+        font-weight: 500;
+        max-width: 160px;
+      }
+      .manager-email{
+        i[class^=icon-]{
+          font-size: 10px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .value{
+          line-height: 1.6;
+        }
+      }
+      .manager-phone{
+        i[class^=icon-]{
+          font-size: 14px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .value{
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+.header__profile {
+  padding: 17px 12px 10px;
+  right: 0;
+  left: auto;
+
+  .profile-status {
+    padding: 0 5px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: $secondary;
+
+    span {
+      color: $body-color;
+    }
+  }
+
+  .profile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      + li {
+        margin-top: 10px;
+      }
+
+      .profile-link {
+        color: $body-color;
+        line-height: 1.6;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+
+        i[class^=icon-] {
+          margin-right: 10px;
+          font-size: 22px;
+        }
+
+        .counter {
+          width: 18px;
+          height: 18px;
+          background: linear-gradient(180deg, #FF5F1B -6.25%, #FF0000 259.72%);
+          border-radius: 50px;
+          font-size: 9px;
+          text-align: center;
+          color: #FFFFFF;
+          display: inline-block;
+          font-weight: bold;
+          vertical-align: middle;
+          margin-left: 5px;
+          padding: 2px 0;
+        }
+      }
+
+      &:last-child {
+        margin-top: 16px;
+        padding-top: 11px;
+        border-top: 1px solid #DDDDDD;
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-down(lg) {
+
+}
+@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(sm) {}

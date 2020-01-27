@@ -117,13 +117,14 @@ a {
 	transition: color $transition;
 	outline: none;
 
+	&:visited {
+		color: $link-visited-color;
+	}
+
 	&:hover {
 		color: $link-hover-color;
 	}
 
-	&:visited {
-		color: $link-visited-color;
-	}
 }
 
 
