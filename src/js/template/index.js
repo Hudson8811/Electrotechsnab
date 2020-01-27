@@ -31,21 +31,19 @@ import { tooltip } from './modules/common/popper';
 import 'slick-carousel';
 
 
-import 'masonry-layout';
+//import 'masonry-layout';
+import 'isotope-layout';
 var $ = require('jquery');
 var jQueryBridget = require('jquery-bridget');
-var Masonry = require('masonry-layout');
-jQueryBridget('masonry', Masonry, $);
+//var Masonry = require('masonry-layout');
+//jQueryBridget('masonry', Masonry, $);
 
+import 'isotope-layout';
+var Isotope = require('isotope-layout');
+jQueryBridget('isotope', Isotope, $);
 
-require('jquery-ui-bundle');
+require("jquery-ui/ui/widgets/slider");
 import 'jquery-ui-touch-punch';
-///////////////////
-//require('../libs/jquery-ui.min.js');
-//require('../libs/jquery.ui.touch-punch.min.js');
-/////////////////
-
-
 
 
 
@@ -160,10 +158,17 @@ $(document).ready(function () {
     }
 
     if ($('.js-masonry-grid').length > 0) {
-        $('.js-masonry-grid').masonry({
+        $('.js-masonry-grid').isotope({
             itemSelector: '.masonry-item',
             horizontalOrder: true,
-            percentPosition: true
+            percentPosition: true,
+            getSortData: {
+                order: '[data-mobile-order]'
+            }
+        });
+        mansorySort();
+        $(window).on('resize',function () {
+            mansorySort();
         });
     }
 
@@ -260,5 +265,13 @@ function toggleMegaMenu(status) {
         $('.mega-menu').addClass('active');
     } else {
         $('.mega-menu').removeClass('active');
+    }
+}
+
+function mansorySort() {
+    if ($(window).width() < 767.98){
+        $('.js-masonry-grid').isotope({ sortBy: 'order' });
+    } else{
+        $('.js-masonry-grid').isotope({ sortBy: 'original-order' });
     }
 }
