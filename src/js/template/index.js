@@ -43,7 +43,7 @@ var Isotope = require('isotope-layout');
 jQueryBridget('isotope', Isotope, $);
 
 require("jquery-ui/ui/widgets/slider");
-import 'jquery-ui-touch-punch';
+require ('jquery-ui-touch-punch');
 
 
 
@@ -88,21 +88,22 @@ $(document).ready(function () {
         $(".js-span-data-range").slider({});
         alert(1);
     }*/
-
+    if ($('.home-sub-slider').length > 0) {
+        $('.home-sub-slider').slick({
+            dots: false,
+            arrows: true,
+            autoplay: true,
+            swipe: false
+        });
+    }
     if ($('.home-slider').length > 0) {
         $('.home-slider').slick({
             dots: true,
-            arrows: true,
-            responsive: [
-                {
-                    breakpoint: 767.98,
-                    settings: {
-                        arrows: false,
-                    }
-                },
-            ]
+            arrows: false,
         });
     }
+
+
     if ($('.you-see_slider').length > 0) {
         $('.you-see_slider').slick({
             dots: false,

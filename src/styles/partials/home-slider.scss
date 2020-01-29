@@ -1,5 +1,5 @@
 .home-slider{
-  .slick-list{
+  >.slick-list{
     height: 398px;
     border-radius: 8px;
     box-sizing: border-box;
@@ -17,39 +17,7 @@
     position: static;
     margin-top: 13px;
   }
-  .slick-prev, .slick-next{
-    top: calc(1.5rem + 10px);
-    width: 44px;
-    height: 44px;
-    z-index: 100;
-    &::before{
-      content: "\e924";
-      opacity: 1;
-      color: $primary;
-      font-size: 30px;
-      font-family: 'icons';
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-    }
-    &:hover{
-      &::before{
-        color: $link-hover-color;
-      }
-    }
-  }
-  .slick-prev{
-    transform: rotate(90deg);
-    left: auto;
-    right: 47px;
-  }
-  .slick-next{
-    transform: rotate(-90deg);
-    right: 3px;
-  }
+
 }
 .home-slider__image{
   border-radius: 8px;
@@ -108,6 +76,55 @@
     display: block;
   }
 }
+
+.home-sub-slider{
+  height: 100%;
+  >.slick-list{
+    height: 100%;
+    .slick-track{
+      height: 100%;
+      .slick-slide{
+        >div{
+          height: 100%;
+        }
+      }
+    }
+  }
+  .slick-prev, .slick-next{
+    top: calc(10px);
+    width: 44px;
+    height: 44px;
+    z-index: 100;
+    &::before{
+      content: "\e924";
+      opacity: 1;
+      color: $primary;
+      font-size: 30px;
+      font-family: 'icons';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+    }
+    &:hover{
+      &::before{
+        color: $link-hover-color;
+      }
+    }
+  }
+  .slick-prev{
+    transform: rotate(90deg);
+    left: auto;
+    right: 62px;
+  }
+  .slick-next{
+    transform: rotate(-90deg);
+    right: 18px;
+  }
+}
+
 
 @include media-breakpoint-down(lg) {
   .home-slider {

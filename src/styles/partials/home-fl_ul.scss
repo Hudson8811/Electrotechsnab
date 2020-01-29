@@ -71,7 +71,13 @@
   }
   &.light{
     *{
-      color: #FFFFFF !important;
+      color: #FFFFFF;
+      &:visited{
+        color: #FFFFFF;
+      }
+      &:hover{
+        color: #FFFFFF;
+      }
     }
   }
   &.bg-cover{
@@ -219,10 +225,14 @@
       &:not(.active){
         border: 1px solid $primary;
         color: $primary;
-      background: $white !important;
+        background: $white;
         &:hover {
           border-color: $link-hover-color;
           color:  $link-hover-color;
+          background: $white;
+        }
+        &:active{
+          background: $white;
         }
       }
     }
